@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/chrismichaelscott/whostarredin/issues"
   },
-  "homepage": "https://github.com/chrismichaelscott/whostarredin#readme"
+  "homepage": "https://github.com/chrismichaelscott/whostarredin#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mustache": "^2.2.1"
+  }
 }
