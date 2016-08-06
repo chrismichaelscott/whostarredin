@@ -31,7 +31,7 @@ module.exports = {
         var actorLookups = [];
 
         actors.forEach(function (actor) {
-          var actorUrl = actor.uri;
+          var actorUrl = actor.url;
           var lookupUri = elasticSearchUrl + '/' + index + '/' + actorUrl;
 
           var getActor = axios.get(lookupUri);
@@ -41,6 +41,7 @@ module.exports = {
         Promise.all(actorLookups).then(function (results) {
           actors.forEach(function(actor, index) {
             actor.label = results[index].data._source.label;
+            actor.image = results[index].data._source.image;
           });
           resolve(publicationData);
         });
