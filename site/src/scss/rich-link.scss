@@ -4,6 +4,15 @@
     padding: 0;
   }
 
+  li {
+    float: left;
+    margin: 0;
+
+    &:nth-child(4n - 3) {
+      margin-left: 0;
+    }
+  }
+
   @media (min-width: $breakpoint-large-desktop) {
     li {
       margin-left: $grid-spacing-large-desktop;
@@ -47,15 +56,6 @@
     a {
       width: $grid-width-mobile-small;
       height: $grid-width-mobile-small * 1.1;
-    }
-  }
-
-  li {
-    float: left;
-    margin: 0;
-
-    &:nth-child(4n - 3) {
-      margin-left: 0;
     }
   }
 
