@@ -1,3 +1,4 @@
+var config = require('../../config');
 var Mustache = require('mustache');
 var entityService = require('../services/entity');
 var inliningService = require('../services/inlining');
