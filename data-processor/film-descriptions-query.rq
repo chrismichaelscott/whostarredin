@@ -1,0 +1,8 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+select distinct ?uri ?abstract where {
+  ?uri a dbo:Film ;
+       dbo:abstract ?abstract .
+
+  FILTER(lang(?abstract) = "en" || LANG(?label) = "")
+}

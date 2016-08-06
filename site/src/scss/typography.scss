@@ -21,12 +21,14 @@ p {
   line-height: 1.7em;
 }
 
-a[href] {
-  color: $color-scheme-highlight;
-  @include fancy-underline($color-scheme-highlight, $color-scheme-background);
-
-  &.quiet-link {
-    color: currentColor;
-    text-decoration: none;
+section.related {
+  a[href] {
+    color: $color-scheme-highlight;
+    @include fancy-underline($color-scheme-highlight, $color-scheme-background);
   }
+}
+
+a.quiet-link {
+  color: currentColor;
+  text-decoration: none;
 }

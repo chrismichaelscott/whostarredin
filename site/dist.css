@@ -56,15 +56,16 @@ p {
   font-size: 1.2rem;
   line-height: 1.7em; }
 
-a[href] {
+section.related a[href] {
   color: #F6944B;
   text-decoration: none;
   background-image: -webkit-linear-gradient(90deg, #fff 0.1em, #F6944B 0.1em, #F6944B 0.15em, #fff 0.17em);
   background-image: linear-gradient(0deg, #fff 0.1em, #F6944B 0.1em, #F6944B 0.15em, #fff 0.17em);
   text-shadow: -1px 0 1px #fff, -1px 0 0 #fff, 1px 0 0 #fff, 1px 0 1px #fff; }
-  a[href].quiet-link {
-    color: currentColor;
-    text-decoration: none; }
+
+a.quiet-link {
+  color: currentColor;
+  text-decoration: none; }
 
 div.cse-container {
   position: absolute;

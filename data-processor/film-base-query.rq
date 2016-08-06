@@ -1,0 +1,29 @@
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT * WHERE {
+
+  ?film p:P161 ?castmember ;
+				rdfs:label ?filmName .
+
+	?wikipediaFilmUrl schema:about ?film .
+
+  ?castmember pq:P453 _:c ;
+  			  ps:P161 ?actor .
+	?actor rdfs:label ?actorName .
+  ?wikipediaActorUrl schema:about ?actor .
+  _:c   rdfs:label ?character
+
+	FILTER (lang(?character) = "en" || LANG(?label) = "")
+	FILTER (lang(?actorName) = "en" || LANG(?label) = "")
+	FILTER (lang(?filmName) = "en" || LANG(?label) = "")
+	FILTER (regex(str(?wikipediaActorUrl), "https://en."))
+	FILTER (regex(str(?wikipediaFilmUrl), "https://en."))
+}

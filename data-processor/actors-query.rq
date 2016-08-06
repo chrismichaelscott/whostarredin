@@ -9,18 +9,15 @@ PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX wsi: <http://whostarredin.com/data/>
 PREFIX schema: <http://schema.org/>
 
-CONSTRUCT {
-	?actor rdfs:label ?label ;
-           wsi:movie	?movie ;
-           schema:about ?cleanedWikipediaLink
-}
+SELECT REDUCED ?actor ?label ?wikipediaUrl
 
 WHERE {
-  	?movie wdt:P161 ?actor .
+		_:film wdt:P161 ?actor .
 
   	?actor	rdfs:label ?label .
 
-    ?cleanedWikipediaLink schema:about ?actor
+    ?wikipediaUrl schema:about ?actor
 
-    FILTER(LANG(?label) = "en" || LANG(?label) = "" )
+    FILTER (LANG(?label) = "en" || LANG(?label) = "")
+		FILTER (regex(str(?wikipediaUrl), "https://en."))
 }
