@@ -1,0 +1,2698 @@
+{
+  "head": {
+    "vars": [
+      "subject",
+      "predicate",
+      "object",
+      "context"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%82%E0%AE%9A%E0%AF%88%E0%AE%9F%E0%AF%8D%20%E0%AE%B8%E0%AF%8D%E0%AE%95%E0%AF%8D%E0%AE%B5%E0%AE%BE%E0%AE%9F%E0%AF%8D%20%28%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%88%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%AE%E0%AF%8D%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%81%D8%B1%D9%82%D8%A9%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AD%D8%A7%D8%B1%D9%8A%D8%A9"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://bg.wikipedia.org/wiki/%D0%9E%D1%82%D1%80%D1%8F%D0%B4%20%D1%81%D0%B0%D0%BC%D0%BE%D1%83%D0%B1%D0%B8%D0%B9%D1%86%D0%B8"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://ckb.wikipedia.org/wiki/%D8%AF%DB%95%D8%B3%D8%AA%DB%95%DB%8C%20%D8%AE%DB%86%D9%83%D9%88%DA%98%DB%8C%20%28%D9%81%DB%8C%D9%84%D9%85%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://commons.wikimedia.org/wiki/Category%3ASuicide%20Squad%20%28film%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://cs.wikipedia.org/wiki/Sebevra%C5%BEedn%C3%BD%20odd%C3%ADl"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://de.wikipedia.org/wiki/Suicide%20Squad%20%28Film%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://en.wikipedia.org/wiki/Suicide%20Squad%20%28film%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://es.wikipedia.org/wiki/Escuadr%C3%B3n%20Suicida%20%28pel%C3%ADcula%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://fi.wikipedia.org/wiki/Suicide%20Squad%20%28elokuva%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://fr.wikipedia.org/wiki/Suicide%20Squad%20%28film%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://he.wikipedia.org/wiki/%D7%99%D7%97%D7%99%D7%93%D7%AA%20%D7%94%D7%9E%D7%AA%D7%90%D7%91%D7%93%D7%99%D7%9D%20%28%D7%A1%D7%A8%D7%98%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://hu.wikipedia.org/wiki/Suicide%20Squad%20%E2%80%93%20%C3%96ngyilkos%20osztag"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://id.wikipedia.org/wiki/Suicide%20Squad%20%28film%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://it.wikipedia.org/wiki/Suicide%20Squad%20%28film%202016%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://ko.wikipedia.org/wiki/%EC%88%98%EC%96%B4%EC%82%AC%EC%9D%B4%EB%93%9C%20%EC%8A%A4%EC%BF%BC%EB%93%9C%20%28%EC%98%81%ED%99%94%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://nl.wikipedia.org/wiki/Suicide%20Squad"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://no.wikipedia.org/wiki/Suicide%20Squad%20%28film%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://pl.wikipedia.org/wiki/Legion%20samob%C3%B3jc%C3%B3w"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://ro.wikipedia.org/wiki/Suicide%20Squad%20%28film%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://ru.wikipedia.org/wiki/%D0%9E%D1%82%D1%80%D1%8F%D0%B4%20%D1%81%D0%B0%D0%BC%D0%BE%D1%83%D0%B1%D0%B8%D0%B9%D1%86%20%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%2C%202016%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://simple.wikipedia.org/wiki/Suicide%20Squad%20%28movie%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://sr.wikipedia.org/wiki/%D0%9E%D0%B4%D1%80%D0%B5%D0%B4%20%D0%BE%D1%82%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%85"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://sv.wikipedia.org/wiki/Suicide%20Squad%20%28film%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://th.wikipedia.org/wiki/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%9E%E0%B8%A5%E0%B8%B5%E0%B8%8A%E0%B8%B5%E0%B8%9E%20%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B2%E0%B8%A2%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A2"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://tr.wikipedia.org/wiki/Suicide%20Squad%20%28film%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D1%96%D0%BD%20%D1%81%D0%B0%D0%BC%D0%BE%D0%B3%D1%83%D0%B1%D1%86%D1%96%D0%B2%20%28%D1%84%D1%96%D0%BB%D1%8C%D0%BC%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://zh.wikipedia.org/wiki/%E8%87%AA%E6%AE%BA%E7%AA%81%E6%93%8A%E9%9A%8A"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://hi.wikipedia.org/wiki/%E0%A4%B8%E0%A5%81%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%A1%20%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BC%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%A1%20%28%E0%A4%AB%E0%A4%BC%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%AE%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://pt.wikipedia.org/wiki/Esquadr%C3%A3o%20Suicida%20%28filme%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://hy.wikipedia.org/wiki/%D4%BB%D5%B6%D6%84%D5%B6%D5%A1%D5%BD%D5%BA%D5%A1%D5%B6%D5%B6%D5%A5%D6%80%D5%AB%20%D5%BB%D5%B8%D5%AF%D5%A1%D5%BF%D5%A8"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://ms.wikipedia.org/wiki/Suicide%20Squad%20%28filem%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://jv.wikipedia.org/wiki/Suicide%20Squad%20%28filem%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://vi.wikipedia.org/wiki/Bi%E1%BB%87t%20%C4%91%E1%BB%99i%20c%E1%BA%A3m%20t%E1%BB%AD%20%28phim%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://kk.wikipedia.org/wiki/%D0%96%D0%B0%D0%BD%D0%BA%D0%B5%D1%88%D1%82%D1%96%D0%BB%D0%B5%D1%80%20%D0%B6%D0%B0%D1%81%D0%B0%D2%93%D1%8B%20%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%2C%202016%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://eu.wikipedia.org/wiki/Suicide%20Squad%20%28filma%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://fa.wikipedia.org/wiki/%D8%AC%D9%88%D8%AE%D9%87%20%D8%AE%D9%88%D8%AF%DA%A9%D8%B4%DB%8C%20%28%D9%81%DB%8C%D9%84%D9%85%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q20502242-8e5a8f88-4a22-17a6-5674-567e253b4416"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/qualifier/P155"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q14772351-a4532c7e-4920-1610-4dd3-d739932ed13f"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/qualifier/P156"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89%E3%83%BB%E3%82%B9%E3%82%AF%E3%83%AF%E3%83%83%E3%83%89%20%28%E6%98%A0%E7%94%BB%29"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/about"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q14772351-f2a6e731-4ffc-c48c-0288-7c8352fcb289"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/statement/P156"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q20502242-290f3145-4a0f-de79-5fdd-58f37f3277f9"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/statement/P155"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q14772351"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P156"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q849477-2a902c62-45a7-a23b-4b41-bdb62b1f7f12"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/qualifier/P1441"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q19544285"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2002/07/owl#sameAs"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q19818389"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2002/07/owl#sameAs"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q19999711"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2002/07/owl#sameAs"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q20502242"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P155"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P2529"
+        },
+        "object": {
+          "type": "literal",
+          "value": "266805"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P1970"
+        },
+        "object": {
+          "type": "literal",
+          "value": "142890"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P1476"
+        },
+        "object": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P344"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-C38EDAC2-E076-40F8-96EE-5C8D9D898176"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P345"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-29A4A873-CC7B-40DF-B8AE-58563B87D100"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P364"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-3e2fdaed-48cb-87b5-63ee-feeeb91aad81"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P373"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-B291168E-58CA-477B-B18C-B0E964A17469"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P462"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-ADBF3512-918F-40BA-BDF7-3CF706E0C8BF"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P495"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-8D47ABC0-2536-44EC-BDB5-9CC6F8462AA6"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P480"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-FAC98607-998D-4B91-AB7F-54432FB52560"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P577"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-606d92a2-4833-38ff-17cd-2bc21de333aa"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P750"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-f2f78f2a-4fe9-b811-149c-2f0233498ab6"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P856"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-60145289-736B-47BA-8DF9-D25BBDADB143"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P905"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-e9c191a2-47e8-d74c-b8ed-e1e456963ffc"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P1237"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-5C21450A-5269-42D6-9A07-8EE81A15349E"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P1258"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-AE0D1EF4-B774-42F6-8F89-78328C35F807"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P1265"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-3CFC008E-C032-44A9-A0A4-C6A66C7AE7FF"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P1476"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-333BD743-A8C7-4A0A-9FE1-427D8FC5A94D"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P1562"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-7f0c0881-4106-d873-77eb-0486b6925ffa"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P1712"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-32bccd33-4285-e5ae-ef5b-186c7a2f3f29"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P1970"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-A0ACD9E3-7517-4C76-941A-258F46E88A7A"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P2529"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-414F3693-0C07-4A8E-BB39-2A48B6EBE854"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P1562"
+        },
+        "object": {
+          "type": "literal",
+          "value": "v617723"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P1712"
+        },
+        "object": {
+          "type": "literal",
+          "value": "movie/suicide-squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P2363"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-FAAAAB27-D4E9-410E-9AE4-602F23A9D73C"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P2970"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-4DA92709-4977-4173-84C3-9EE11446E8B6"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P2970"
+        },
+        "object": {
+          "type": "literal",
+          "value": "86454000012PLXMQDD"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P1040"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-A478C265-DA4C-475F-8E6D-36F78490F6C1"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P646"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-386b776d-4c88-338d-6122-1523fb4e9b0c"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P2013"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-589dc849-4ca9-dee8-e11c-32abf6a848a2"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P2003"
+        },
+        "object": {
+          "type": "literal",
+          "value": "suicidesquadmovie"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P2002"
+        },
+        "object": {
+          "type": "literal",
+          "value": "SuicideSquadWB"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P2013"
+        },
+        "object": {
+          "type": "literal",
+          "value": "SuicideSquad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P2002"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-8127fa96-4b7c-acd3-86ef-8406e876f7e0"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P2003"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-8b86e0d0-4b8a-6068-d47e-0b8e44ac8e9e"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P1657"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-e6078139-4d3c-c6b2-4dc5-e9932563ca17"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P2637"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-1f318dcd-483d-1972-fefa-2868c07c547a"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P1657"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18665339"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P2363"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q21571489"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P2637"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q23308563"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P364"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1860"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P495"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q30"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P31"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q11424"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q28262"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q40096"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/description"
+        },
+        "object": {
+          "xml:lang": "he",
+          "type": "literal",
+          "value": "סרט"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P905"
+        },
+        "object": {
+          "type": "literal",
+          "value": "167033"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P1265"
+        },
+        "object": {
+          "type": "literal",
+          "value": "144185"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/description"
+        },
+        "object": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "2016 film"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/description"
+        },
+        "object": {
+          "xml:lang": "fr",
+          "type": "literal",
+          "value": "film sorti en 2016"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/description"
+        },
+        "object": {
+          "xml:lang": "nl",
+          "type": "literal",
+          "value": "film uit 2016"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P480"
+        },
+        "object": {
+          "type": "literal",
+          "value": "592391"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/description"
+        },
+        "object": {
+          "xml:lang": "sv",
+          "type": "literal",
+          "value": "Amerikansk film"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "de",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "fi",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "fr",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "he",
+          "type": "literal",
+          "value": "יחידת המתאבדים"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "ko",
+          "type": "literal",
+          "value": "수어사이드 스쿼드"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "nl",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "zh",
+          "type": "literal",
+          "value": "犯罪敢死隊"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "it",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "ru",
+          "type": "literal",
+          "value": "Отряд самоубийц"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "sv",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P856"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.suicidesquad.com"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P345"
+        },
+        "object": {
+          "type": "literal",
+          "value": "tt1386697"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P373"
+        },
+        "object": {
+          "type": "literal",
+          "value": "Suicide Squad (film)"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P1237"
+        },
+        "object": {
+          "type": "literal",
+          "value": "dc2016"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P1258"
+        },
+        "object": {
+          "type": "literal",
+          "value": "m/suicide_squad_2016"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P31"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-C9940FC3-3BA5-4EE8-B97E-1989A0D18FAC"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P58"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-a7e69d5c-4282-bb8f-e6f6-64bfd1a8d3c6"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P57"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-4362c394-4942-e1fc-2b08-eb9cf0de7435"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P86"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-B63E9EE6-A73B-43E1-A817-EAD10B04F81E"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P136"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-15DE977F-E0AF-4075-9EA2-BB91848EE0D9"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P136"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-40fe069e-4d3a-44a7-a400-89c97fa18481"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P156"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-5d0ea164-4369-0da8-006b-9fc07970b6dc"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-029a6f1c-4aa2-45c7-c7d8-f1ffdb53dd74"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-058954d4-479d-133e-e73f-dcc9abd11b2e"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-3c680518-4e28-dd80-f9b7-61f657994f1a"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-55868918-48fd-be19-ac50-1eac655070d0"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-56be5b5e-40e4-ff11-4339-beaa7b8a05c0"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-6f1f3f49-445f-be89-681b-5205b8cab95c"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-b351479a-4b50-0de5-fd90-7658e9321c8c"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-e4691494-48e6-935b-5a49-e9e80a8669ee"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-f3dbb06f-46cc-9e7a-9259-63d7d8a5505d"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "ar",
+          "type": "literal",
+          "value": "الفرقة الانتحارية"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "bg",
+          "type": "literal",
+          "value": "Самоубийственият отряд"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "ckb",
+          "type": "literal",
+          "value": "دەستەی خۆكوژی"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "cs",
+          "type": "literal",
+          "value": "Sebevražedný oddíl"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/description"
+        },
+        "object": {
+          "xml:lang": "de",
+          "type": "literal",
+          "value": "Comicverfilmung (2016)"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "en-ca",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "en-gb",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/description"
+        },
+        "object": {
+          "xml:lang": "es",
+          "type": "literal",
+          "value": "Película de 2016"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "fa",
+          "type": "literal",
+          "value": "جوخه انتحار (فیلم)"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2004/02/skos/core#altLabel"
+        },
+        "object": {
+          "xml:lang": "hu",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "hi",
+          "type": "literal",
+          "value": "सूसाइड स्क्वाड"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/description"
+        },
+        "object": {
+          "xml:lang": "hu",
+          "type": "literal",
+          "value": "film (2016)"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "hu",
+          "type": "literal",
+          "value": "Suicide Squad – Öngyilkos osztag"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/description"
+        },
+        "object": {
+          "xml:lang": "it",
+          "type": "literal",
+          "value": "film del 2016 diretto da David Ayer"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "スーサイド・スクワッド"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "nb",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "pl",
+          "type": "literal",
+          "value": "Legion samobójców"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "pt",
+          "type": "literal",
+          "value": "O Esquadrão Suicida"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "ro",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/description"
+        },
+        "object": {
+          "xml:lang": "ru",
+          "type": "literal",
+          "value": "предстоящий фильм 2016 года"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "sr",
+          "type": "literal",
+          "value": "Одред отписаних"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "ta",
+          "type": "literal",
+          "value": "சூசைட் ஸ்க்வாட்"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "th",
+          "type": "literal",
+          "value": "ทีมพลีชีพ มหาวายร้าย"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "tr",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "uk",
+          "type": "literal",
+          "value": "Загін самогубців"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "id",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "hy",
+          "type": "literal",
+          "value": "Ինքնասպանների ջոկատը"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "ms",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "jv",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P646"
+        },
+        "object": {
+          "type": "literal",
+          "value": "/m/012dwdjr"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "vi",
+          "type": "literal",
+          "value": "Biệt đội cảm tử"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "es",
+          "type": "literal",
+          "value": "Escuadrón de la onda vital"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/P179"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/statement/Q18604504-087860bd-4189-bea6-3ab2-c565480d7e36"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "object": {
+          "xml:lang": "eu",
+          "type": "literal",
+          "value": "Suicide Squad"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/version"
+        },
+        "object": {
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "type": "literal",
+          "value": "362125005"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P577"
+        },
+        "object": {
+          "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "literal",
+          "value": "2016-08-01T00:00:00Z"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://schema.org/dateModified"
+        },
+        "object": {
+          "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "literal",
+          "value": "2016-08-06T13:56:18Z"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P750"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1097348"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q229181"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q294586"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P136"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q471839"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q484523"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q604849"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P58"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1091339"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P57"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1091339"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1320494"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1395624"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P136"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1535153"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P161"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1924847"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P1040"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q3181589"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P344"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q15151625"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P86"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q15104233"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P179"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18281265"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P156"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q20502242"
+        }
+      },
+      {
+        "subject": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18604504"
+        },
+        "predicate": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/prop/direct/P462"
+        },
+        "object": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q22006653"
+        }
+      }
+    ]
+  }
+}

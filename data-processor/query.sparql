@@ -1,0 +1,29 @@
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wsi: <http://whostarredin.com/data/>
+
+CONSTRUCT {
+	?movie wdt:P577	?date ;
+           rdfs:label	?label	;
+          wdt:P161	?actor ;
+          wdt:P57	?director
+} WHERE {
+	?movie wdt:P31 wd:Q11424 ;
+           rdfs:label	?label
+    OPTIONAL {
+		?movie wdt:P577	?date
+    }
+  	OPTIONAL {
+		?movie  wdt:P161 ?actor
+	}
+  	OPTIONAL {
+		?movie wdt:P57	?director
+	}
+  FILTER(LANG(?label) = "en" || LANG(?label) = "" )
+}
