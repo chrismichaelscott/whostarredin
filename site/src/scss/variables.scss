@@ -3,7 +3,33 @@ $color-scheme-primary: #4F7AC3;
 $color-scheme-highlight: #F6944B;
 $color-scheme-background: #fff;
 
-$site-width-laptop: 1050px;
+// Start responsive display configuration
+
+$breakpoint-large-desktop: 1700px;
+$site-width-large-desktop: 1600px;
+$grid-columns-large-desktop: 5;
+$grid-spacing-large-desktop: 25px;
+$grid-width-large-desktop: ($site-width-large-desktop - ($grid-columns-large-desktop - 1) * $grid-spacing-large-desktop) / $grid-columns-large-desktop;
+
+$breakpoint-laptop: 1200px;
+$site-width-laptop: 1051px;
 $grid-columns-laptop: 4;
 $grid-spacing-laptop: 25px;
 $grid-width-laptop: ($site-width-laptop - ($grid-columns-laptop - 1) * $grid-spacing-laptop) / $grid-columns-laptop;
+
+$breakpoint-tablet: 650px;
+$site-width-tablet: 601px;
+$grid-columns-tablet: 3;
+$grid-spacing-tablet: 20px;
+$grid-width-tablet: ($site-width-tablet - ($grid-columns-tablet - 1) * $grid-spacing-tablet) / $grid-columns-tablet;
+
+$breakpoint-mobile: 400px;
+$site-width-mobile: 400px;
+$grid-columns-mobile: 2;
+$grid-spacing-mobile: 16px;
+$grid-width-mobile: ($site-width-mobile - ($grid-columns-mobile - 1) * $grid-spacing-mobile) / $grid-columns-mobile;
+
+$site-width-mobile-small: 100%;
+$grid-columns-mobile-small: 1;
+$grid-spacing-mobile-small: 0;
+$grid-width-mobile-small: ($site-width-mobile-small - ($grid-columns-mobile-small - 1) * $grid-spacing-mobile-small) / $grid-columns-mobile-small;

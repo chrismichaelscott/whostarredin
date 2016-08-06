@@ -4,9 +4,38 @@ html, body {
   font-size: 16px; }
 
 header h1, header h2, section {
-  width: 1050px;
   margin: auto; }
 
+@media (min-width: 1700px) {
+  header h1, header h2, section {
+    width: 1600px; }
+
+  header div.hero-image-wrapper {
+    height: 560px; } }
+@media (min-width: 1200px) and (max-width: 1700px) {
+  header h1, header h2, section {
+    width: 1051px; }
+
+  header div.hero-image-wrapper {
+    height: 300px; } }
+@media (min-width: 650px) and (max-width: 1200px) {
+  header h1, header h2, section {
+    width: 601px; }
+
+  header div.hero-image-wrapper {
+    height: 220px; } }
+@media (min-width: 400px) and (max-width: 650px) {
+  header h1, header h2, section {
+    width: 400px; }
+
+  header div.hero-image-wrapper {
+    height: 150px; } }
+@media (max-width: 400px) {
+  header h1, header h2, section {
+    width: 100%; }
+
+  header div.hero-image-wrapper {
+    height: 140px; } }
 html, body {
   font-family: Lato, sans-serif;
   color: #4E4B5D; }
@@ -51,8 +80,12 @@ header h2 {
   color: white;
   text-align: right;
   text-transform: uppercase; }
+@media (max-width: 450px) {
+  header div.hero-image-wrapper {
+    background-color: black; }
+    header div.hero-image-wrapper img {
+      display: none; } }
 header div.hero-image-wrapper {
-  height: 300px;
   overflow-y: hidden;
   position: relative;
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)); }
@@ -66,15 +99,43 @@ header img.fullbleed {
 .link-grid ul {
   list-style: none;
   padding: 0; }
+@media (min-width: 1700px) {
+  .link-grid li {
+    margin-left: 25px; }
+  .link-grid a {
+    width: 300px;
+    height: 330px; } }
+@media (min-width: 1200px) and (max-width: 1700px) {
+  .link-grid li {
+    margin-left: 25px; }
+  .link-grid a {
+    width: 244px;
+    height: 268.4px; } }
+@media (min-width: 650px) and (max-width: 1200px) {
+  .link-grid li {
+    margin-left: 20px; }
+  .link-grid a {
+    width: 187px;
+    height: 205.7px; } }
+@media (min-width: 400px) and (max-width: 650px) {
+  .link-grid li {
+    margin-left: 16px; }
+  .link-grid a {
+    width: 192px;
+    height: 211.2px; } }
+@media (max-width: 400px) {
+  .link-grid li {
+    margin-left: 0; }
+  .link-grid a {
+    width: 100%;
+    height: 110%; } }
 .link-grid li {
   float: left;
-  margin: 0 0 25px 25px; }
+  margin: 0; }
   .link-grid li:nth-child(4n - 3) {
     margin-left: 0; }
 .link-grid a {
   display: block;
-  width: 243.75px;
-  height: 268.125px;
   background-size: cover;
   position: relative; }
   .link-grid a h3 {

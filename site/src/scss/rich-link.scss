@@ -4,9 +4,55 @@
     padding: 0;
   }
 
+  @media (min-width: $breakpoint-large-desktop) {
+    li {
+      margin-left: $grid-spacing-large-desktop;
+    }
+    a {
+      width: $grid-width-large-desktop;
+      height: $grid-width-large-desktop * 1.1;
+    }
+  }
+  @media (min-width: $breakpoint-laptop) and (max-width: $breakpoint-large-desktop) {
+    li {
+      margin-left: $grid-spacing-laptop;
+    }
+    a {
+      width: $grid-width-laptop;
+      height: $grid-width-laptop * 1.1;
+    }
+  }
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop) {
+    li {
+      margin-left: $grid-spacing-tablet;
+    }
+    a {
+      width: $grid-width-tablet;
+      height: $grid-width-tablet * 1.1;
+    }
+  }
+  @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    li {
+      margin-left: $grid-spacing-mobile;
+    }
+    a {
+      width: $grid-width-mobile;
+      height: $grid-width-mobile * 1.1;
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    li {
+      margin-left: $grid-spacing-mobile-small;
+    }
+    a {
+      width: $grid-width-mobile-small;
+      height: $grid-width-mobile-small * 1.1;
+    }
+  }
+
   li {
     float: left;
-    margin: 0 0 $grid-spacing-laptop $grid-spacing-laptop;
+    margin: 0;
 
     &:nth-child(4n - 3) {
       margin-left: 0;
@@ -15,8 +61,6 @@
 
   a {
     display: block;
-    width: $grid-width-laptop;
-    height: $grid-width-laptop * 1.1;
     background-size: cover;
     position: relative;
 

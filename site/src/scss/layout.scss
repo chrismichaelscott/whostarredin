@@ -1,4 +1,44 @@
 header h1, header h2, section {
-  width: $site-width-laptop;
   margin: auto;
+}
+
+@media (min-width: $breakpoint-large-desktop) {
+  header h1, header h2, section {
+    width: $site-width-large-desktop;
+  }
+  header div.hero-image-wrapper {
+    height: 560px;
+  }
+}
+@media (min-width: $breakpoint-laptop) and (max-width: $breakpoint-large-desktop) {
+  header h1, header h2, section {
+    width: $site-width-laptop;
+  }
+  header div.hero-image-wrapper {
+    height: 300px;
+  }
+}
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop) {
+  header h1, header h2, section {
+    width: $site-width-tablet;
+  }
+  header div.hero-image-wrapper {
+    height: 220px;
+  }
+}
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+  header h1, header h2, section {
+    width: $site-width-mobile;
+  }
+  header div.hero-image-wrapper {
+    height: 150px;
+  }
+}
+@media (max-width: $breakpoint-mobile) {
+  header h1, header h2, section {
+    width: $site-width-mobile-small;
+  }
+  header div.hero-image-wrapper {
+    height: 140px;
+  }
 }
