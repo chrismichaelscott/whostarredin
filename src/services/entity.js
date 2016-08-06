@@ -15,6 +15,8 @@ module.exports = {
 
     return new Promise(function(resolve) {
       Promise.all([getMovie, getOverlay]).then(function(result) {
+
+        console.log("Retrieved movie data and manual override");
         var publicationData = result[0].data._source;
 
         if (result[1]) {
@@ -33,14 +35,16 @@ module.exports = {
           var actorUrl = actor.url;
           var lookupUri = elasticSearchUrl + '/' + index + '/' + actorUrl;
 
-          var getActor = axios.get(lookupUri);
+          var getActor = axios.get(lookupUri).catch(function() {});
           actorLookups.push(getActor);
         });
 
         Promise.all(actorLookups).then(function (results) {
           actors.forEach(function(actor, index) {
-            actor.label = results[index].data._source.label;
-            actor.image = results[index].data._source.image;
+            if (results[index]) {
+              actor.label = results[index].data._source.label;
+              actor.image = results[index].data._source.image;
+            }
           });
           resolve(publicationData);
         });
