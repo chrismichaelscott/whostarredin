@@ -1,3 +1,10 @@
+@mixin fancy-underline($foreground, $background) {
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(90deg, $background 0.1em, $foreground 0.1em, $foreground 0.15em, $background 0.17em);
+  background-image: linear-gradient(0deg, $background 0.1em, $foreground 0.1em, $foreground 0.15em, $background 0.17em);
+  text-shadow: -1px 0 1px $background,-1px 0 0 $background,1px 0 0 $background,1px 0 1px $background;
+}
+
 html, body {
   font-family: Lato, sans-serif;
   color: $color-scheme-foreground;
@@ -16,8 +23,9 @@ p {
 
 a[href] {
   color: $color-scheme-highlight;
+  @include fancy-underline($color-scheme-highlight, $color-scheme-background);
 
-  .quiet-link {
+  &.quiet-link {
     color: currentColor;
     text-decoration: none;
   }

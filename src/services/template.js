@@ -10,6 +10,10 @@ function getTemplate(name) {
     } else {
       console.log("reading template " + name);
       fs.readFile(__dirname + "/../../views/" + name + ".mustache", function(error, data) {
+        if (error) {
+          console.log("Could not load template " + name);
+          console.error(error)
+        }
         var template = data.toString();
         resolve(template);
         if (config.cache.templates.enabled) {
