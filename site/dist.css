@@ -8,6 +8,10 @@ header h1, header h2, section {
 
 section {
   clear: both; }
+  section.related {
+    padding-top: 1.6rem; }
+  section.reviews {
+    padding-top: 3rem; }
 
 @media (min-width: 1700px) {
   header h1, header h2, section {
@@ -51,6 +55,9 @@ header {
 p {
   font-size: 1.2rem;
   line-height: 1.7em; }
+
+a[href] {
+  color: #F6944B; }
 
 div.cse-container {
   position: absolute;
@@ -140,7 +147,10 @@ header img.fullbleed {
     color: white;
     text-align: center; }
 
-section.reviews {
-  padding-top: 3rem; }
+section.related ul {
+  list-style: none;
+  padding: 0; }
+  section.related ul li {
+    margin: 0.6em 0; }
 
 /*# sourceMappingURL=dist.css.map */

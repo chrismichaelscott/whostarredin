@@ -11,7 +11,6 @@ function setImageUrl(id, imageType, publicationData) {
     console.log("Looking for " + imageType + " image");
 
     fs.access(__dirname + "/../../media/" + id + "/" + imageType + ".jpg", function(jpgError) {
-      console.log("TTYYY");
       if (jpgError) {
         fs.access(__dirname + "/../../media/" + id + "/" + imageType + ".png", function(pngError) {
           if (pngError) {
@@ -108,6 +107,27 @@ module.exports = {
 
           resolve(featuredEntities);
         });
+      });
+    });
+  },
+  getRelatedEntities(type, id) {
+    return new Promise(function(resolve, reject) {
+      var query = {
+        "query": {
+          "more_like_this" : {
+            "like": {
+              "_index" : index,
+              "_type" : type,
+              "_id" : id
+            }
+          }
+        }
+      }
+      axios.post(elasticsearchUrl + "/" + index + "/" + type + "/_search?size=5", query).then(function(response) {
+        var related = response.data.hits.hits.map(function(hit) {
+          return hit._source;
+        });
+        resolve(related);
       });
     });
   }

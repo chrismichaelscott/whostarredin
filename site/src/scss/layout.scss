@@ -4,6 +4,13 @@ header h1, header h2, section {
 
 section {
   clear: both;
+
+  &.related {
+    padding-top: 1.6rem;
+  }
+  &.reviews {
+    padding-top: 3rem;
+  }
 }
 
 @media (min-width: $breakpoint-large-desktop) {
