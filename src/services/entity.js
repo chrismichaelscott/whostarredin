@@ -1,23 +1,53 @@
 var axios = require('axios');
+var fs = require('fs');
+var config = require('../../config.js');
 
-var elasticsearchUrl = 'https://search-who-starred-in-xggtxxutyts6aujbbedqdvjtge.eu-west-1.es.amazonaws.com';
-var index = 'whostarredin';
-var overlay = 'overlay';
+var elasticsearchUrl = config.elastisearch.url;
+var index = config.elastisearch.index;
+var overlay = config.elastisearch.overlaySuffix;
+
+function setImageUrl(id, imageType, publicationData) {
+  return new Promise(function(resolve, reject) {
+    console.log("Looking for " + imageType + " image");
+
+    fs.access(__dirname + "/../../media/" + id + "/" + imageType + ".jpg", function(jpgError) {
+      console.log("TTYYY");
+      if (jpgError) {
+        fs.access(__dirname + "/../../media/" + id + "/" + imageType + ".png", function(pngError) {
+          if (pngError) {
+            publicationData[imageType] = "/media/default/" + imageType + ".png";
+          } else {
+            publicationData[imageType] = "/media/" + id + "/" + imageType + ".png";
+          }
+          console.log("Found " + imageType + " image");
+          resolve();
+        });
+      } else {
+        publicationData[imageType] = "/media/" + id + "/" + imageType + ".jpg";
+        console.log("Found " + imageType + " image");
+        resolve();
+      }
+    });
+  });
+}
 
 module.exports = {
   getEntity: function(type, id) {
 
-    var esFilmUri = elasticsearchUrl + '/' + index + '/' + type + '/' + id;
-    var esOverlayUri = elasticsearchUrl + '/' + index + '/' + type + '_' + overlay + '/' + id;
+    var elasticsearchWikidataUrl = elasticsearchUrl + '/' + index + '/' + type + '/' + id;
+    var elasticsearchOverlayUrl = elasticsearchUrl + '/' + index + '/' + type + '_' + overlay + '/' + id;
 
-    var getMovie = axios.get(esFilmUri);
-    var getOverlay = axios.get(esOverlayUri).catch(function() {});
+    var getEntityPromise = axios.get(elasticsearchWikidataUrl);
+    var getOverlayPromise = axios.get(elasticsearchOverlayUrl).catch(function() {});
 
     return new Promise(function(resolve) {
-      Promise.all([getMovie, getOverlay]).then(function(result) {
+      Promise.all([getEntityPromise, getOverlayPromise]).then(function(result) {
 
         console.log("Retrieved movie data and manual override");
         var publicationData = result[0].data._source;
+
+        var heroPromise = setImageUrl(id, "hero", publicationData);
+        var imagePromise = setImageUrl(id, "image", publicationData);
 
         if (result[1]) {
           var overlay = result[1].data._source;
@@ -46,7 +76,10 @@ module.exports = {
               actor.image = results[index].data._source.image;
             }
           });
-          resolve(publicationData);
+
+          Promise.all([heroPromise, imagePromise]).then(function() {
+            resolve(publicationData);
+          });
         });
       });
     });
@@ -56,20 +89,21 @@ module.exports = {
       var elasticsearchQueryUrl = elasticsearchUrl + '/' + index + '/' + type + '_' + overlay + '/_search?';//q=featured:true';
 
       var getMovie = axios.get(elasticsearchQueryUrl).then(function(result) {
+        var featuredEntities = [];
         var lookupPromises = [];
 
         result.data.hits.hits.forEach(function(hit) {
-          lookupPromises.push(axios.get(elasticsearchUrl + '/' + index + '/' + type + "/" + hit._id));
+          axios.get(elasticsearchUrl + '/' + index + '/' + type + "/" + hit._id).then(function(response) {
+            var entity = response.data._source;
+            lookupPromises.push(setImageUrl(id, "hero", entity));
+            lookupPromises.push(setImageUrl(id, "image", entity));
+            featuredEntities.push(entity);
+          });
         });
 
         Promise.all(lookupPromises).then(function(results) {
-          var featuredEntities = [];
-
-          results.sort(function() {
+          featuredEntities.sort(function() {
             return .5 - Math.random();
-          });
-          results.forEach(function(result) {
-            featuredEntities.push(result.data._source);
           });
 
           resolve(featuredEntities);

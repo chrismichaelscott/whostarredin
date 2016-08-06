@@ -11,6 +11,8 @@ function handleEntityRequest(request, response) {
   });
 }
 
+app.use('/media', express.static('media'));
+
 app.get('/', function(request, response) {
   pageResource.renderHomepage().then(function(responseBody) {
     response.send(responseBody);
