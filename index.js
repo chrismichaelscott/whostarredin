@@ -1,12 +1,12 @@
 var express = require('express');
 var config = require('./config');
 
-var filmResource = require('./src/resources/film');
+var pageResource = require('./src/resources/page');
 
 var app = express();
 
-app.get('/film/:id', function (request, response) {
-  filmResource.renderFilmPage(request.params.id).then(function(responseBody) {
+app.get('/:type/:id', function (request, response) {
+  pageResource.renderPage(request.params.type, request.params.id).then(function(responseBody) {
     response.send(responseBody);
   });
 });

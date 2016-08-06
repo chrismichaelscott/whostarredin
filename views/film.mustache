@@ -1,5 +1,9 @@
 {{> header}}
   <section class="introduction">
+    {{#film.franchise}}
+    <p>Part of the <a href="{{film.franchise.url}}">{{film.franchise.label}}</a> franchise</p>
+    {{/film.franchise}}
+
     {{#film.blurb}}
     <p>{{film.blurb}}</p>
     {{/film.blurb}}
