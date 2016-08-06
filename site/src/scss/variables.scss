@@ -2,3 +2,8 @@ $color-scheme-foreground: #4E4B5D;
 $color-scheme-primary: #4F7AC3;
 $color-scheme-highlight: #F6944B;
 $color-scheme-background: #fff;
+
+$site-width-laptop: 1050px;
+$grid-columns-laptop: 4;
+$grid-spacing-laptop: 25px;
+$grid-width-laptop: ($site-width-laptop - ($grid-columns-laptop - 1) * $grid-spacing-laptop) / $grid-columns-laptop;

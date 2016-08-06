@@ -8,7 +8,7 @@ module.exports = {
 
   renderFilmPage: function(id) {
     var templatePromise = templateService.get("film");
-    var partialsPromise = templateService.getPartials(["header", "footer"]);
+    var partialsPromise = templateService.getPartials(["header", "footer", "rich-link"]);
     var entityPromise = entityService.getEntity("film", id);
     var inliningPromise = inliningService.get();
 
@@ -24,6 +24,7 @@ module.exports = {
         var template = results[0];
         var headerPartial = results[1][0];
         var footerPartial = results[1][1];
+        var richLinksPartial = results[1][2];
         var model = results[2];
         var css = results[3];
 
@@ -38,7 +39,8 @@ module.exports = {
               },
               {
                 header: headerPartial,
-                footer: footerPartial
+                footer: footerPartial,
+                "rich-link": richLinksPartial
               }
             )
           );

@@ -5,6 +5,7 @@ module.exports = {
       resolve({
         id: 998,
         label: "Star Wars: The Force Awakens",
+        hero: "https://i.ytimg.com/vi/xnSmj6YeSAc/maxresdefault.jpg",
         franciase: {
           label: "Star Wars",
           url: "/franciase/star-wars"
@@ -27,23 +28,28 @@ module.exports = {
         cast: [
           {
             label: "Harrison Ford",
-            url: "/actor/harrison-ford"
+            url: "/actor/harrison-ford",
+            image: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Harrison_Ford_by_Gage_Skidmore.jpg"
           },
           {
             label: "Mark Hamill",
-            url: "/actor/mark-hamill"
+            url: "/actor/mark-hamill",
+            image: "https://upload.wikimedia.org/wikipedia/commons/8/86/Mark_Hamill_by_Gage_Skidmore.jpg"
           },
           {
             label: "Carrie Fisher",
-            url: "/actor/carrie-fisher"
+            url: "/actor/carrie-fisher",
+            image: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Carrie_Fisher_2013.jpg"
           },
           {
             label: "Adam Driver",
-            url: "/actor/adam-driver"
+            url: "/actor/adam-driver",
+            image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Adam_Driver_by_Gage_Skidmore.jpg"
           },
           {
             label: "Daisy Ridley",
-            url: "/actor/daisy-ridley"
+            url: "/actor/daisy-ridley",
+            image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Daisy_Ridley_by_Gage_Skidmore.jpg"
           },
           {
             label: "John Boyega",

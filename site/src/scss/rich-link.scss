@@ -1,0 +1,35 @@
+.link-grid {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    float: left;
+    margin: 0 0 $grid-spacing-laptop $grid-spacing-laptop;
+
+    &:nth-child(4n - 3) {
+      margin-left: 0;
+    }
+  }
+
+  a {
+    display: block;
+    width: $grid-width-laptop;
+    height: $grid-width-laptop * 1.1;
+    background-size: cover;
+    position: relative;
+
+    h3 {
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+      padding: 1em;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0,0.7);
+      color: white;
+      text-align: center;
+    }
+  }
+}

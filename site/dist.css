@@ -3,6 +3,10 @@ html, body {
   padding: 0;
   font-size: 16px; }
 
+header h1, header h2, section {
+  width: 1050px;
+  margin: auto; }
+
 html, body {
   font-family: Lato, sans-serif;
   color: #4E4B5D; }
@@ -31,14 +35,10 @@ form.search-bar {
   form.search-bar input {
     width: 11rem; }
   form.search-bar button {
-    width: 3rem;
+    width: 3.4rem;
     margin-left: -1px;
     background-color: #4F7AC3;
     color: #fff; }
-
-header h1, header h2, section {
-  width: 1050px;
-  margin: auto; }
 
 header h1 {
   font-size: 4rem;
@@ -62,5 +62,30 @@ header img.fullbleed {
   z-index: -1;
   top: 150px;
   transform: translateY(-50%); }
+
+.link-grid ul {
+  list-style: none;
+  padding: 0; }
+.link-grid li {
+  float: left;
+  margin: 0 0 25px 25px; }
+  .link-grid li:nth-child(4n - 3) {
+    margin-left: 0; }
+.link-grid a {
+  display: block;
+  width: 243.75px;
+  height: 268.125px;
+  background-size: cover;
+  position: relative; }
+  .link-grid a h3 {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 1em;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center; }
 
 /*# sourceMappingURL=dist.css.map */
