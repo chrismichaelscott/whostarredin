@@ -10,7 +10,12 @@ module.exports = {
 			enabled: false
 		}
 	},
+	// Google Tag Manager
 	gtm: {
 		id: "GTM-K29BFN"
+	},
+	// Google Custom Search Engine
+	cse: {
+		id: "000564799181643116475:anhhe5mapg8"
 	}
 };

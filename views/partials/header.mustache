@@ -19,10 +19,20 @@
   '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','{{gtmId}}');</script>
   <!-- End Google Tag Manager -->
-  <form class="search-bar">
-    <input name="search-term"></input>
-    <button type="submit">search</button>
-  </form>
+  <div class="cse-container">
+    <script>
+      (function() {
+        var cx = '{{cseId}}';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+  </div>
   <header>
     <h1>Who was in...</h1>
     <div class="hero-image-wrapper">

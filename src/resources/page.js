@@ -32,7 +32,8 @@ module.exports = {
         var model = {
           inlineCss: css,
           subject: subject,
-          gtmId: config.gtm.id
+          gtmId: config.gtm.id,
+          cseId: config.cse.id
         };
         model[type] = subject;
 
