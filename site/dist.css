@@ -1,0 +1,44 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+
+html, body {
+  font-family: Lato, sans-serif; }
+
+header {
+  font-family: Exo;
+  font-weight: 800; }
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.7em; }
+
+header h1, header h2, section {
+  width: 1050px;
+  margin: auto; }
+
+header h1 {
+  font-size: 4rem;
+  transform: translateY(50%);
+  text-shadow: -3px 0 0 white, -2px 2px 0 white, 0px 3px 0 white, 2px 2px 0 white, 3px 0px 0 white, 2px -2px 0 white, 0px -3px 0 white, -2px -2px 0 white, 0 0 5px white; }
+header h2 {
+  font-size: 3.2rem;
+  line-height: 0.7em;
+  transform: translateY(-0.645em);
+  color: white;
+  text-align: right;
+  text-transform: uppercase; }
+header div.hero-image-wrapper {
+  height: 300px;
+  overflow-y: hidden;
+  position: relative;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)); }
+header img.fullbleed {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 150px;
+  transform: translateY(-50%); }
+
+/*# sourceMappingURL=dist.css.map */

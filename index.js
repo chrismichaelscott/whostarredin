@@ -6,7 +6,9 @@ var filmResource = require('./src/resources/film');
 var app = express();
 
 app.get('/', function (request, response) {
-  response.send(filmResource.renderFilmPage(2));
+  filmResource.renderFilmPage(2).then(function(responseBody) {
+    response.send(responseBody);
+  });
 });
 
 app.listen(config.http.port, function () {
