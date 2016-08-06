@@ -86,7 +86,7 @@ module.exports = {
   },
   getFeaturedEntities: function(type, limit) {
     return new Promise(function(resolve, reject) {
-      var elasticsearchQueryUrl = elasticsearchUrl + '/' + index + '/' + type + '_' + overlay + '/_search?';//q=featured:true';
+      var elasticsearchQueryUrl = elasticsearchUrl + '/' + index + '/' + type + '_' + overlay + '/_search?q=featured:true';
 
       var getMovie = axios.get(elasticsearchQueryUrl).then(function(result) {
         var featuredEntities = [];
