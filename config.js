@@ -9,5 +9,8 @@ module.exports = {
 		cssInlining: {
 			enabled: false
 		}
+	},
+	gtm: {
+		id: "GTM-K29BFN"
 	}
 };

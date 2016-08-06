@@ -32,7 +32,8 @@ module.exports = {
               template,
               {
                 inlineCss: css,
-                film: model
+                film: model,
+                gtmId: config.gtm.id
               },
               {
                 header: headerPartial,
