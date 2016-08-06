@@ -1,0 +1,6 @@
+    <h2>Similar to {{subject.label}}</h2>
+    <ul>
+      {{#related}}
+      <li><a href="{{url}}">{{label}}{{#mainStar}} - starring {{mainStar.label}}{{/mainStar}}</a></li>
+      {{/related}}
+    </ul>

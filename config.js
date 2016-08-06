@@ -10,6 +10,11 @@ module.exports = {
 			enabled: false
 		}
 	},
+	elastisearch: {
+		url: "https://search-who-starred-in-xggtxxutyts6aujbbedqdvjtge.eu-west-1.es.amazonaws.com",
+		index: "whostarredin",
+		overlaySuffix: "overlay"
+	},
 	// Google Tag Manager
 	gtm: {
 		id: "GTM-K29BFN"

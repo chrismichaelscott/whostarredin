@@ -8,6 +8,10 @@ header h1, header h2, section {
 
 section {
   clear: both; }
+  section.related {
+    padding-top: 1.6rem; }
+  section.reviews {
+    padding-top: 3rem; }
 
 @media (min-width: 1700px) {
   header h1, header h2, section {
@@ -51,6 +55,16 @@ header {
 p {
   font-size: 1.2rem;
   line-height: 1.7em; }
+
+a[href] {
+  color: #F6944B;
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(90deg, #fff 0.1em, #F6944B 0.1em, #F6944B 0.15em, #fff 0.17em);
+  background-image: linear-gradient(0deg, #fff 0.1em, #F6944B 0.1em, #F6944B 0.15em, #fff 0.17em);
+  text-shadow: -1px 0 1px #fff, -1px 0 0 #fff, 1px 0 0 #fff, 1px 0 1px #fff; }
+  a[href].quiet-link {
+    color: currentColor;
+    text-decoration: none; }
 
 div.cse-container {
   position: absolute;
@@ -127,7 +141,8 @@ header img.fullbleed {
 .link-grid a {
   display: block;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .link-grid a h3 {
     position: absolute;
     bottom: 0;
@@ -139,7 +154,10 @@ header img.fullbleed {
     color: white;
     text-align: center; }
 
-section.reviews {
-  padding-top: 3rem; }
+section.related ul {
+  list-style: none;
+  padding: 0; }
+  section.related ul li {
+    margin: 0.6em 0; }
 
 /*# sourceMappingURL=dist.css.map */

@@ -5,10 +5,34 @@ var pageResource = require('./src/resources/page');
 
 var app = express();
 
-app.get('/:type/:id', function (request, response) {
-  pageResource.renderPage(request.params.type, request.params.id).then(function(responseBody) {
+function handleEntityRequest(type, request, response) {
+  pageResource.renderPage(type, request.params.id).then(function(responseBody) {
     response.send(responseBody);
   });
+}
+
+app.use('/media', express.static('media'));
+
+app.get('/', function(request, response) {
+  pageResource.renderHomepage().then(function(responseBody) {
+    response.send(responseBody);
+  });
+});
+
+app.get('/film/:id/:vanity', function(request, response) {
+  handleEntityRequest("film", request, response);
+});
+
+app.get('/film/:id', function(request, response) {
+  handleEntityRequest("film", request, response);
+});
+
+app.get('/actor/:id/:vanity', function(request, response) {
+  handleEntityRequest("actor", request, response);
+});
+
+app.get('/actor/:id', function(request, response) {
+  handleEntityRequest("actor", request, response);
 });
 
 app.listen(config.http.port, function () {
