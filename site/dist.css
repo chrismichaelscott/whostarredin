@@ -127,7 +127,8 @@ header img.fullbleed {
 .link-grid a {
   display: block;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .link-grid a h3 {
     position: absolute;
     bottom: 0;
