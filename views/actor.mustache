@@ -1,0 +1,15 @@
+{{> header}}
+  <section class="introduction">
+    <p>{{actor.dbpediaAbstract}}</p>
+  </section>
+  <section class="link-grid filmography">
+    <h2>Filmography</h2>
+    <ul>
+      {{#actor.movies}}
+      <li>
+        {{> rich-link}}
+      </li>
+      {{/actor.movies}}
+    </ul>
+  </section>
+{{> footer}}

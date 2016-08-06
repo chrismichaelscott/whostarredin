@@ -25,14 +25,15 @@ module.exports = {
         var headerPartial = results[1][0];
         var footerPartial = results[1][1];
         var richLinksPartial = results[1][2];
-        var entity = results[2];
+        var subject = results[2];
         var css = results[3];
 
         var model = {
           inlineCss: css,
+          subject: subject,
           gtmId: config.gtm.id
         };
-        model[type] = entity;
+        model[type] = subject;
 
         var partials = {
           header: headerPartial,
