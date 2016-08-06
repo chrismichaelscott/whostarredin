@@ -6,6 +6,9 @@ html, body {
 header h1, header h2, section {
   margin: auto; }
 
+section {
+  clear: both; }
+
 @media (min-width: 1700px) {
   header h1, header h2, section {
     width: 1600px; }
@@ -148,5 +151,8 @@ header img.fullbleed {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center; }
+
+section.reviews {
+  padding-top: 3rem; }
 
 /*# sourceMappingURL=dist.css.map */

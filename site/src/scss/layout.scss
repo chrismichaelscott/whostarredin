@@ -2,6 +2,10 @@ header h1, header h2, section {
   margin: auto;
 }
 
+section {
+  clear: both;
+}
+
 @media (min-width: $breakpoint-large-desktop) {
   header h1, header h2, section {
     width: $site-width-large-desktop;

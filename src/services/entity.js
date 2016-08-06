@@ -11,8 +11,7 @@ module.exports = {
     var esOverlayUri = elasticSearchUrl + '/' + index + '/' + type + '_' + overlay + '/' + id;
 
     var getMovie = axios.get(esFilmUri);
-    var getOverlay = axios.get(esOverlayUri).catch(function() {
-    });
+    var getOverlay = axios.get(esOverlayUri).catch(function() {});
 
     return new Promise(function(resolve) {
       Promise.all([getMovie, getOverlay]).then(function(result) {

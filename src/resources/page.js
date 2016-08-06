@@ -8,7 +8,7 @@ module.exports = {
 
   renderPage: function(type, id) {
     var templatePromise = templateService.get(type);
-    var partialsPromise = templateService.getPartials(["header", "footer", "rich-link"]);
+    var partialsPromise = templateService.getPartials(["header", "footer", "rich-link", "reviews"]);
     var entityPromise = entityService.getEntity(type, id);
     var inliningPromise = inliningService.get();
 
@@ -25,6 +25,7 @@ module.exports = {
         var headerPartial = results[1][0];
         var footerPartial = results[1][1];
         var richLinksPartial = results[1][2];
+        var reviewsPartial = results[1][3];
         var subject = results[2];
         var css = results[3];
 
@@ -38,7 +39,8 @@ module.exports = {
         var partials = {
           header: headerPartial,
           footer: footerPartial,
-          "rich-link": richLinksPartial
+          "rich-link": richLinksPartial,
+          reviews: reviewsPartial
         };
 
         try {
