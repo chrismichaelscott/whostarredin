@@ -1,9 +1,16 @@
 {{> header}}
   <section class="introduction">
-    {{#film.mainStar}}
-    <p>The {{film.year}} {{film.adjective}}, {{film.label}}, starred {{film.mainStar.label}} as {{film.mainStar.character}}.</p>
-    {{/film.mainStar}}
+    {{#film.blurb}}
     <p>{{film.blurb}}</p>
+    {{/film.blurb}}
+    {{^film.blurb}}
+    {{#film.useNlg}}
+    <p>The {{film.year}} {{film.adjective}}, {{film.label}}, starred {{film.mainStar.label}} as {{film.mainStar.character}}.</p>
+    {{/film.useNlg}}
+    {{^film.useNlg}}
+    <p>{{film.dbPediaAbstract}}</p>
+    {{/film.useNlg}}
+    {{/film.blurb}}
   </section>
   <section class="link-grid cast">
     <h2>Cast</h2>
