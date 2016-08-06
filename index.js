@@ -5,8 +5,8 @@ var filmResource = require('./src/resources/film');
 
 var app = express();
 
-app.get('/', function (request, response) {
-  filmResource.renderFilmPage(2).then(function(responseBody) {
+app.get('/film/:id', function (request, response) {
+  filmResource.renderFilmPage(request.params.id).then(function(responseBody) {
     response.send(responseBody);
   });
 });

@@ -1,0 +1,27 @@
+form.search-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+
+  * {
+    display: block;
+    margin: 0;
+    float: left;
+    line-height: 2em;
+    border: 1px solid $color-scheme-primary;
+    padding: 0 0.5rem;
+  }
+
+  input {
+    width: 11rem;
+  }
+
+  button {
+    width: 3rem;
+    margin-left: -1px;
+    background-color: $color-scheme-primary;
+    color: $color-scheme-background;
+  }
+
+}

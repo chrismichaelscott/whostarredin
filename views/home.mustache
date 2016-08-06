@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{film.label}}</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Exo:800|Lato:400,100,400italic,700' rel='stylesheet' type='text/css'>
+  <style>
+    {{inlineCss}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Who was in...</h1>
+    <div class="hero-image-wrapper">
+      <img src="https://i.ytimg.com/vi/xnSmj6YeSAc/maxresdefault.jpg" class="fullbleed"></img>
+    </div>
+    <h2>{{film.label}}</h2>
+  </header>
+  <section>
+    {{#film.mainStar}}
+    <p>The {{film.year}} {{film.adjective}}, {{film.label}}, starred {{film.mainStar.label}} as {{film.mainStar.character}}.</p>
+    {{/film.mainStar}}
+    <p>{{film.blurb}}</p>
+  </section>
+</body>
+</html>

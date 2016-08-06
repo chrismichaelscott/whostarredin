@@ -4,15 +4,37 @@ html, body {
   font-size: 16px; }
 
 html, body {
-  font-family: Lato, sans-serif; }
+  font-family: Lato, sans-serif;
+  color: #4E4B5D; }
 
 header {
   font-family: Exo;
-  font-weight: 800; }
+  font-weight: 800;
+  color: black; }
 
 p {
   font-size: 1.2rem;
   line-height: 1.7em; }
+
+form.search-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem; }
+  form.search-bar * {
+    display: block;
+    margin: 0;
+    float: left;
+    line-height: 2em;
+    border: 1px solid #4F7AC3;
+    padding: 0 0.5rem; }
+  form.search-bar input {
+    width: 11rem; }
+  form.search-bar button {
+    width: 3rem;
+    margin-left: -1px;
+    background-color: #4F7AC3;
+    color: #fff; }
 
 header h1, header h2, section {
   width: 1050px;
