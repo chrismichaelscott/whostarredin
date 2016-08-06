@@ -58,6 +58,9 @@ p {
 
 a[href] {
   color: #F6944B; }
+  a[href] .quiet-link {
+    color: currentColor;
+    text-decoration: none; }
 
 div.cse-container {
   position: absolute;

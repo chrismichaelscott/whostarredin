@@ -16,4 +16,9 @@ p {
 
 a[href] {
   color: $color-scheme-highlight;
+
+  .quiet-link {
+    color: currentColor;
+    text-decoration: none;
+  }
 }
