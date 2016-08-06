@@ -11,20 +11,39 @@ module.exports = {
     var esOverlayUri = elasticSearchUrl + '/' + index + '/' + type + '_' + overlay + '/' + id;
 
     var getMovie = axios.get(esFilmUri);
-    var getOverlay = axios.get(esOverlayUri);
+    var getOverlay = axios.get(esOverlayUri).catch(function() {
+    });
 
-    return new Promise(function(resolve, reject) {
+    return new Promise(function(resolve) {
       Promise.all([getMovie, getOverlay]).then(function(result) {
-
         var publicationData = result[0].data._source;
 
-        var overlay = result[1].data._source;
-        for (key in overlay) {
-          if (overlay.hasOwnProperty(key)) {
-            publicationData[key] = overlay[key];
+        if (result[1]) {
+          var overlay = result[1].data._source;
+          for (var key in overlay) {
+            if (overlay.hasOwnProperty(key)) {
+              publicationData[key] = overlay[key];
+            }
           }
         }
-        resolve(publicationData);
+
+        var actors = publicationData.cast;
+        var actorLookups = [];
+
+        actors.forEach(function (actor) {
+          var actorUrl = actor.uri;
+          var lookupUri = elasticSearchUrl + '/' + index + '/' + actorUrl;
+
+          var getActor = axios.get(lookupUri);
+          actorLookups.push(getActor);
+        });
+
+        Promise.all(actorLookups).then(function (results) {
+          actors.forEach(function(actor, index) {
+            actor.label = results[index].data._source.label;
+          });
+          resolve(publicationData);
+        });
       });
     });
   }
