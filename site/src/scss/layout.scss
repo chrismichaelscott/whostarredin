@@ -38,7 +38,7 @@ section {
   }
 }
 @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
-  header h1, header h2, section {
+  section {
     width: $site-width-mobile;
   }
   header div.hero-image-wrapper {
@@ -46,10 +46,10 @@ section {
   }
 }
 @media (max-width: $breakpoint-mobile) {
-  header h1, header h2, section {
+  section {
     width: $site-width-mobile-small;
   }
   header div.hero-image-wrapper {
-    height: 140px;
+    height: 80px;
   }
 }

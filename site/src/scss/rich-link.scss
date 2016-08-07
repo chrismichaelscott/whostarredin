@@ -7,15 +7,15 @@
   li {
     float: left;
     margin: 1em 0 0 0;
-
-    &:nth-child(4n - 3) {
-      margin-left: 0;
-    }
   }
 
   @media (min-width: $breakpoint-large-desktop) {
     li {
       margin-left: $grid-spacing-large-desktop;
+
+      &:nth-child(#{$grid-columns-large-desktop}n - #{$grid-columns-large-desktop - 1}) {
+        margin-left: 0;
+      }
     }
     a {
       width: $grid-width-large-desktop;
@@ -25,6 +25,10 @@
   @media (min-width: $breakpoint-laptop) and (max-width: $breakpoint-large-desktop) {
     li {
       margin-left: $grid-spacing-laptop;
+
+      &:nth-child(#{$grid-columns-laptop}n - #{$grid-columns-laptop - 1}) {
+        margin-left: 0;
+      }
     }
     a {
       width: $grid-width-laptop;
@@ -34,6 +38,10 @@
   @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop) {
     li {
       margin-left: $grid-spacing-tablet;
+
+      &:nth-child(#{$grid-columns-tablet}n - #{$grid-columns-tablet - 1}) {
+        margin-left: 0;
+      }
     }
     a {
       width: $grid-width-tablet;
@@ -43,6 +51,10 @@
   @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
     li {
       margin-left: $grid-spacing-mobile;
+
+      &:nth-child(#{$grid-columns-mobile}n - #{$grid-columns-mobile - 1}) {
+        margin-left: 0;
+      }
     }
     a {
       width: $grid-width-mobile;
@@ -52,6 +64,10 @@
   @media (max-width: $breakpoint-mobile) {
     li {
       margin-left: $grid-spacing-mobile-small;
+
+      &:nth-child(#{$grid-columns-mobile-small}n - #{$grid-columns-mobile-small - 1}) {
+        margin-left: 0;
+      }
     }
     a {
       width: $grid-width-mobile-small;
