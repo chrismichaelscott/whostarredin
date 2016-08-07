@@ -1,7 +1,13 @@
 {{> header}}
 
   <section class="introduction">
-    TTT
+    {{#featuredEntities}}
+    <article>
+      <h3>{{label}}</h3>
+      <img src="{{image}}"></image>
+      <p>{{blurb}}</h3>
+    </article>
+    {{/featuredEntities}}
   </section>
 
 {{> footer}}
