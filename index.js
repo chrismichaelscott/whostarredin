@@ -8,6 +8,8 @@ var app = express();
 function handleEntityRequest(type, request, response) {
   pageResource.renderPage(type, request.params.id).then(function(responseBody) {
     response.send(responseBody);
+  }).catch(function (reason) {
+    response.status(reason).send();
   });
 }
 

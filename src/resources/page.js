@@ -61,6 +61,8 @@ module.exports = {
         } catch (error) {
           console.error(error);
         }
+      }).catch(function(reason) {
+        reject(reason);
       });
     });
   },

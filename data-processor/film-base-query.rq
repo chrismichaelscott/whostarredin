@@ -8,7 +8,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT * WHERE {
+SELECT * WHERE {
 
   ?film p:P161 ?castmember ;
 				rdfs:label ?filmName .

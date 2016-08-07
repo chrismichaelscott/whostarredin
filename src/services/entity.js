@@ -47,13 +47,16 @@ function setImageUrl(id, type, imageType, publicationData) {
 module.exports = {
   getEntity: function(type, id) {
 
-    var elasticsearchWikidataUrl = elasticsearchUrl + '/' + index + '/' + type + '/' + id;
-    var elasticsearchOverlayUrl = elasticsearchUrl + '/' + index + '/' + type + '_' + overlay + '/' + id;
+    return new Promise(function(resolve, reject) {
 
-    var getEntityPromise = axios.get(elasticsearchWikidataUrl);
-    var getOverlayPromise = axios.get(elasticsearchOverlayUrl).catch(function() {});
+      var elasticsearchWikidataUrl = elasticsearchUrl + '/' + index + '/' + type + '/' + id;
+      var elasticsearchOverlayUrl = elasticsearchUrl + '/' + index + '/' + type + '_' + overlay + '/' + id;
 
-    return new Promise(function(resolve) {
+      var getEntityPromise = axios.get(elasticsearchWikidataUrl).catch(function () {
+        reject(404);
+      });
+      var getOverlayPromise = axios.get(elasticsearchOverlayUrl).catch(function () {});
+
       Promise.all([getEntityPromise, getOverlayPromise]).then(function(result) {
 
         console.log("Retrieved " + type + " data and manual override");
