@@ -6,23 +6,37 @@ var elasticsearchUrl = config.elastisearch.url;
 var index = config.elastisearch.index;
 var overlay = config.elastisearch.overlaySuffix;
 
-function setImageUrl(id, imageType, publicationData) {
+var propertiesToDereference = [
+  {
+    name: "cast",
+    list: true,
+    imageType: "actor"
+  },
+  {
+    name: "movies",
+    list: true,
+    imageType: "film"
+  }
+];
+
+function setImageUrl(id, type, imageType, publicationData) {
   return new Promise(function(resolve, reject) {
     console.log("Looking for " + imageType + " image");
 
-    fs.access(__dirname + "/../../media/" + id + "/" + imageType + ".jpg", function(jpgError) {
+    fs.access(__dirname + "/../../media/" + type + "/" + id + "/" + imageType + ".jpg", function(jpgError) {
+
       if (jpgError) {
-        fs.access(__dirname + "/../../media/" + id + "/" + imageType + ".png", function(pngError) {
+        fs.access(__dirname + "/../../media/" + type + "/" + id + "/" + imageType + ".png", function(pngError) {
           if (pngError) {
-            publicationData[imageType] = "/media/default/" + imageType + ".png";
+            publicationData[imageType] = "/media/" + type + "/default/" + imageType + ".png";
           } else {
-            publicationData[imageType] = "/media/" + id + "/" + imageType + ".png";
+            publicationData[imageType] = "/media/" + type + "/" + id + "/" + imageType + ".png";
           }
           console.log("Found " + imageType + " image");
           resolve();
         });
       } else {
-        publicationData[imageType] = "/media/" + id + "/" + imageType + ".jpg";
+        publicationData[imageType] = "/media/" + type + "/" + id + "/" + imageType + ".jpg";
         console.log("Found " + imageType + " image");
         resolve();
       }
@@ -42,11 +56,13 @@ module.exports = {
     return new Promise(function(resolve) {
       Promise.all([getEntityPromise, getOverlayPromise]).then(function(result) {
 
-        console.log("Retrieved movie data and manual override");
+        console.log("Retrieved " + type + " data and manual override");
         var publicationData = result[0].data._source;
 
-        var heroPromise = setImageUrl(id, "hero", publicationData);
-        var imagePromise = setImageUrl(id, "image", publicationData);
+        var imagePromises = [];
+
+        imagePromises.push(setImageUrl(id, type, "hero", publicationData));
+        imagePromises.push(setImageUrl(id, type, "image", publicationData));
 
         if (result[1]) {
           var overlay = result[1].data._source;
@@ -57,28 +73,18 @@ module.exports = {
           }
         }
 
-        var actors = publicationData.cast;
-        var actorLookups = [];
-
-        actors.forEach(function (actor) {
-          var actorUrl = actor.url;
-          var lookupUri = elasticsearchUrl + '/' + index + '/' + actorUrl;
-
-          var getActor = axios.get(lookupUri).catch(function() {});
-          actorLookups.push(getActor);
+        propertiesToDereference.forEach(function(property) {
+          if (publicationData[property.name]) {
+            if (property.list) {
+              publicationData[property.name].forEach(function(value) {
+                imagePromises.push(setImageUrl(value.id, property.imageType, "image", value));
+              });
+            }
+          }
         });
 
-        Promise.all(actorLookups).then(function (results) {
-          actors.forEach(function(actor, index) {
-            if (results[index]) {
-              actor.label = results[index].data._source.label;
-              actor.image = results[index].data._source.image;
-            }
-          });
-
-          Promise.all([heroPromise, imagePromise]).then(function() {
-            resolve(publicationData);
-          });
+        Promise.all(imagePromises).then(function() {
+          resolve(publicationData);
         });
       });
     });
