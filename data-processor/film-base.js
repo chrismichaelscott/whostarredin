@@ -8,6 +8,9 @@ var query = 'film-base-query.rq';
 // i.e.
 // node index.js 5 90 100
 // ... will run two requests for 90-94 and 95-99
+//
+// This script is best run with pagesizes/batches of ~5000: films that straddle the batches can lose actors.
+
 var pageSize = parseInt(process.argv[2]);
 var offset = parseInt(process.argv[3]);
 var limit = parseInt(process.argv[4]);
