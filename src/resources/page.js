@@ -91,6 +91,9 @@ module.exports = {
         var model = {
           inlineCss: css,
           featuredEntities: featuredEntities,
+          subject: {
+            hero: "media/homepage/hero.png"
+          },
           gtmId: config.gtm.id,
           cseId: config.cse.id
         };
