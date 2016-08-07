@@ -3,6 +3,7 @@ var axios = require('axios');
 
 var type = 'film';
 var query = 'film-base-query.rq';
+var castQuery = 'film-cast-query.rq';
 
 // Usage node index.js PAGESIZE OFFSET LIMIT
 // i.e.
@@ -16,13 +17,53 @@ function uriToID(uri) {
   return uri.toLowerCase().replace(/'/g, '').replace(/[^a-zA-Z0-9]+/g, '-').replace(/-$/, "");
 }
 
+function processFilm(wikidataUri, film) {
+  fs.readFile(castQuery, function(error, castQueryfile) {
+    if (error) {
+      console.error(error);
+    }
+
+    var castSparql = castQueryfile.toString().replace(/__URI__/, wikidataUri);
+    var castQueryUrl = "https://query.wikidata.org/sparql?query=" + encodeURIComponent(castSparql).replace(/\(/g, "%28").replace(/\)/g, "%29").replace(/\./g, "%2E").replace(/\*/g, "%2A");
+
+    axios.get(castQueryUrl, {headers: {Accept: "application/sparql-results+json"}
+    }).catch(function(error) {
+      console.log("ERROR from Wikidata: " + error);
+    }).then(function(response) {
+      response.data.results.bindings.forEach(function(binding) {
+        var actor = uriToID(decodeURIComponent(binding.wikipediaActorUrl.value.replace(/.*\//, '')));
+        var actorName = binding.actorName.value;
+
+        var role = {
+          id: actor,
+          url: "/actor/" + actor,
+          label: actorName,
+          character: characterName
+        };
+
+        if (binding.characterName) {
+          var characterName = binding.characterName.value;
+          role.character = characterName;
+        }
+
+        film.cast.push(role);
+      });
+
+      var entityUrl = "https://search-who-starred-in-xggtxxutyts6aujbbedqdvjtge.eu-west-1.es.amazonaws.com/whostarredin/film/" + film.id;
+      axios.put(entityUrl, film).catch(function(error) {
+        console.error(error);
+      });
+    });
+  });
+}
+
 fs.readFile(query, function(error, queryfile) {
   if (error) {
     console.error(error);
   }
 
   while (offset < limit) {
-    var sparql = queryfile.toString() + "LIMIT " + pageSize +'\nOFFSET ' + offset;
+    var sparql = queryfile.toString() + " LIMIT " + pageSize +'\nOFFSET ' + offset;
 
     axios.get("https://query.wikidata.org/sparql?query=" + encodeURIComponent(sparql).replace(/\(/g, "%28").replace(/\)/g, "%29").replace(/\./g, "%2E").replace(/\*/g, "%2A"), {headers: {Accept: "application/sparql-results+json"}
     }).catch(function(error) {
@@ -30,49 +71,24 @@ fs.readFile(query, function(error, queryfile) {
     }).then(function(response) {
 
       var films = {};
-      var roles = {};
 
       response.data.results.bindings.forEach(function(binding) {
         var film = uriToID(decodeURIComponent(binding.wikipediaFilmUrl.value.replace(/.*\//, '')));
-        var actor = uriToID(decodeURIComponent(binding.wikipediaActorUrl.value.replace(/.*\//, '')));
-        var character = binding.character.value;
-        var actorName = binding.actorName.value;
         var filmName = binding.filmName.value;
 
-        if (! roles[film]) roles[film] = [];
-        if (! films[film]) films[film] = {};
+        if (! films[binding.film.value]) films[binding.film.value] = {};
 
-        roles[film].push({
-          id: actor,
-          url: "/actor/" + actor,
-          character: character,
-          label: actorName
-        })
-        films[film].id = film;
-        films[film].label = filmName;
+        films[binding.film.value].id = film;
+        films[binding.film.value].label = filmName;
+        films[binding.film.value].cast = [];
       });
 
-      for (var film in films) {
+      for (var wikidataUri in films) {
 
-        var entityUrl = "https://search-who-starred-in-xggtxxutyts6aujbbedqdvjtge.eu-west-1.es.amazonaws.com/whostarredin/film/" + film;
-
-        var duplicateUrls = [];
-        films[film].cast = roles[film].filter(function(role) {
-          if (duplicateUrls.indexOf(role.url) == -1) {
-            duplicateUrls.push(role.url);
-            return true;
-          } else {
-            return false;
-          }
-        });
-
-        console.log(films[film]);
-
-        axios.put(entityUrl, films[film]).catch(function(error) {
-          console.log("ERROR from ES: ", error);
-        });
+        processFilm(wikidataUri, films[wikidataUri]);
       }
     });
+
     offset += pageSize;
   }
 });

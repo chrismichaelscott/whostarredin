@@ -15,15 +15,6 @@ SELECT * WHERE {
 
 	?wikipediaFilmUrl schema:about ?film .
 
-  ?castmember pq:P453 _:c ;
-  			  ps:P161 ?actor .
-	?actor rdfs:label ?actorName .
-  ?wikipediaActorUrl schema:about ?actor .
-  _:c   rdfs:label ?character
-
-	FILTER (lang(?character) = "en" || LANG(?label) = "")
-	FILTER (lang(?actorName) = "en" || LANG(?label) = "")
-	FILTER (lang(?filmName) = "en" || LANG(?label) = "")
-	FILTER (regex(str(?wikipediaActorUrl), "https://en."))
+	FILTER (lang(?filmName) = "en" || LANG(?filmName) = "")
 	FILTER (regex(str(?wikipediaFilmUrl), "https://en."))
 }
