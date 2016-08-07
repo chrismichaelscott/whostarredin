@@ -34,7 +34,7 @@ fs.readFile(query, function(error, queryfile) {
         var image = binding.image.value;
         var suffix = image.replace(/.*\./, '');
 
-        fs.mkdir("../tmpmedia/actor/" + actor, function() {
+        fs.mkdir("../media/actor/" + actor, function() {
           var file = fs.createWriteStream("../media/actor/" + actor + "/image." + suffix);
           var request = http.get(image, function(response) {
             response.pipe(file);
