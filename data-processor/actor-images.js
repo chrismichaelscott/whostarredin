@@ -1,6 +1,6 @@
 var fs = require('fs');
 var axios = require('axios');
-var http = require('http');
+var exec = require('child_process').exec;
 
 var query = 'actor-images-query.rq';
 
@@ -35,10 +35,8 @@ fs.readFile(query, function(error, queryfile) {
         var suffix = image.replace(/.*\./, '');
 
         fs.mkdir("../media/actor/" + actor, function() {
-          var file = fs.createWriteStream("../media/actor/" + actor + "/image." + suffix);
-          var request = http.get(image, function(response) {
-            response.pipe(file);
-          });
+          console.log("../media/actor/" + actor + "/image." + suffix)
+          exec("wget " + image + " --output-document=../media/actor/" + actor + "/image." + suffix);
         });
       });
     });
