@@ -10,11 +10,18 @@ PREFIX schema: <http://schema.org/>
 
 SELECT * WHERE {
 
-  ?film p:P161 ?castmember ;
-				rdfs:label ?filmName .
+  <__URI__> p:P161 ?castmember .
 
-	?wikipediaFilmUrl schema:about ?film .
+  ?castmember ps:P161 ?actor .
+	?actor rdfs:label ?actorName .
+  ?wikipediaActorUrl schema:about ?actor .
 
-	FILTER (lang(?filmName) = "en" || LANG(?filmName) = "")
-	FILTER (regex(str(?wikipediaFilmUrl), "https://en."))
+	OPTIONAL {
+  		?castmember pq:P453 _:c .
+		_:c   rdfs:label ?character
+		FILTER (lang(?character) = "en" || LANG(?character) = "")
+	}
+
+	FILTER (lang(?actorName) = "en" || LANG(?actorName) = "")
+	FILTER (regex(str(?wikipediaActorUrl), "https://en."))
 }

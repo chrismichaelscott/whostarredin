@@ -44,6 +44,23 @@ function setImageUrl(id, type, imageType, publicationData) {
   });
 }
 
+function processFeaturedEntity(type, id, overlay, featuredEntities, lookupPromises) {
+  lookupPromises.push(axios.get(elasticsearchUrl + '/' + index + '/' + type + "/" + id).then(function(response) {
+    var entity = response.data._source;
+
+    lookupPromises.push(setImageUrl(id, type, "hero", entity));
+    lookupPromises.push(setImageUrl(id, type, "image", entity));
+
+    if (overlay.label) {
+      entity.label = overlay.label;
+    };
+    if (overlay.blurb) {
+      entity.blurb = overlay.blurb;
+    };
+    featuredEntities.push(entity);
+  }));
+}
+
 module.exports = {
   getEntity: function(type, id) {
 
@@ -101,19 +118,13 @@ module.exports = {
         var lookupPromises = [];
 
         result.data.hits.hits.forEach(function(hit) {
-          axios.get(elasticsearchUrl + '/' + index + '/' + type + "/" + hit._id).then(function(response) {
-            var entity = response.data._source;
-            lookupPromises.push(setImageUrl(id, "hero", entity));
-            lookupPromises.push(setImageUrl(id, "image", entity));
-            featuredEntities.push(entity);
-          });
+          processFeaturedEntity(type, hit._id, hit._source, featuredEntities, lookupPromises);
         });
 
         Promise.all(lookupPromises).then(function(results) {
-          featuredEntities.sort(function() {
+          featuredEntities = featuredEntities.sort(function() {
             return .5 - Math.random();
           });
-
           resolve(featuredEntities);
         });
       });

@@ -29,7 +29,7 @@ $grid-columns-mobile: 2;
 $grid-spacing-mobile: 16px;
 $grid-width-mobile: ($site-width-mobile - ($grid-columns-mobile - 1) * $grid-spacing-mobile) / $grid-columns-mobile;
 
-$site-width-mobile-small: 100%;
+$site-width-mobile-small: 200px;
 $grid-columns-mobile-small: 1;
 $grid-spacing-mobile-small: 0;
 $grid-width-mobile-small: ($site-width-mobile-small - ($grid-columns-mobile-small - 1) * $grid-spacing-mobile-small) / $grid-columns-mobile-small;

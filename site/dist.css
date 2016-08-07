@@ -32,20 +32,32 @@ section {
   header div.hero-image-wrapper {
     height: 220px; } }
 @media (min-width: 400px) and (max-width: 650px) {
-  header h1, header h2, section {
+  section {
     width: 400px; }
 
   header div.hero-image-wrapper {
     height: 150px; } }
 @media (max-width: 400px) {
-  header h1, header h2, section {
-    width: 100%; }
+  section {
+    width: 200px; }
 
   header div.hero-image-wrapper {
-    height: 140px; } }
+    height: 80px; } }
 html, body {
   font-family: Lato, sans-serif;
   color: #4E4B5D; }
+  @media (min-width: 1600px) {
+    html, body {
+      font-size: 20px; } }
+  @media (min-width: 650px) and (max-width: 1600px) {
+    html, body {
+      font-size: 16px; } }
+  @media (min-width: 400px) and (max-width: 650px) {
+    html, body {
+      font-size: 18px; } }
+  @media (max-width: 400px) {
+    html, body {
+      font-size: 15px; } }
 
 header {
   font-family: Exo;
@@ -75,9 +87,14 @@ div.cse-container {
   width: 300px; }
 
 header h1 {
-  font-size: 4rem;
-  transform: translateY(50%);
-  text-shadow: -3px 0 0 white, -2px 2px 0 white, 0px 3px 0 white, 2px 2px 0 white, 3px 0px 0 white, 2px -2px 0 white, 0px -3px 0 white, -2px -2px 0 white, 0 0 5px white; }
+  font-size: 4rem; }
+  @media (min-width: 401px) {
+    header h1 {
+      transform: translateY(50%);
+      text-shadow: -3px 0 0 white, -2px 2px 0 white, 0px 3px 0 white, 2px 2px 0 white, 3px 0px 0 white, 2px -2px 0 white, 0px -3px 0 white, -2px -2px 0 white, 0 0 5px white; } }
+  @media (max-width: 400px) {
+    header h1 {
+      margin-top: 2em; } }
 header h2 {
   font-size: 3.2rem;
   line-height: 0.7em;
@@ -106,39 +123,47 @@ header img.fullbleed {
   padding: 0; }
 .link-grid li {
   float: left;
-  margin: 0; }
-  .link-grid li:nth-child(4n - 3) {
-    margin-left: 0; }
+  margin: 1em 0 0 0; }
 @media (min-width: 1700px) {
   .link-grid li {
     margin-left: 25px; }
+    .link-grid li:nth-child(5n - 4) {
+      margin-left: 0; }
   .link-grid a {
     width: 300px;
     height: 330px; } }
 @media (min-width: 1200px) and (max-width: 1700px) {
   .link-grid li {
     margin-left: 25px; }
+    .link-grid li:nth-child(4n - 3) {
+      margin-left: 0; }
   .link-grid a {
     width: 244px;
     height: 268.4px; } }
 @media (min-width: 650px) and (max-width: 1200px) {
   .link-grid li {
     margin-left: 20px; }
+    .link-grid li:nth-child(3n - 2) {
+      margin-left: 0; }
   .link-grid a {
     width: 187px;
     height: 205.7px; } }
 @media (min-width: 400px) and (max-width: 650px) {
   .link-grid li {
     margin-left: 16px; }
+    .link-grid li:nth-child(2n - 1) {
+      margin-left: 0; }
   .link-grid a {
     width: 192px;
     height: 211.2px; } }
 @media (max-width: 400px) {
   .link-grid li {
     margin-left: 0; }
+    .link-grid li:nth-child(1n - 0) {
+      margin-left: 0; }
   .link-grid a {
-    width: 100%;
-    height: 110%; } }
+    width: 200px;
+    height: 220px; } }
 .link-grid a {
   display: block;
   background-size: cover;

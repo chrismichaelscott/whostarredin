@@ -1,17 +1,23 @@
 header {
   h1 {
     font-size: 4rem;
-    transform: translateY(50%);
-    text-shadow:
-      -3px 0 0 white,
-      -2px 2px 0 white,
-      0px 3px 0 white,
-      2px 2px 0 white,
-      3px 0px 0 white,
-      2px -2px 0 white,
-      0px -3px 0 white,
-      -2px -2px 0 white,
-      0 0 5px white;
+    @media (min-width: $breakpoint-mobile + 1) {
+      transform: translateY(50%);
+      text-shadow:
+        -3px 0 0 white,
+        -2px 2px 0 white,
+        0px 3px 0 white,
+        2px 2px 0 white,
+        3px 0px 0 white,
+        2px -2px 0 white,
+        0px -3px 0 white,
+        -2px -2px 0 white,
+        0 0 5px white;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-top: 2em;
+    }
   }
 
   h2 {
