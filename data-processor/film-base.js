@@ -30,23 +30,28 @@ function processFilm(wikidataUri, film) {
     }).catch(function(error) {
       console.log("ERROR from Wikidata: " + error);
     }).then(function(response) {
+      var duplicateUrls = [];
       response.data.results.bindings.forEach(function(binding) {
         var actor = uriToID(decodeURIComponent(binding.wikipediaActorUrl.value.replace(/.*\//, '')));
-        var actorName = binding.actorName.value;
 
-        var role = {
-          id: actor,
-          url: "/actor/" + actor,
-          label: actorName,
-          character: characterName
-        };
+        if (duplicateUrls.indexOf(actor) == -1) {
+          duplicateUrls.push(actor);
+          var actorName = binding.actorName.value;
 
-        if (binding.characterName) {
-          var characterName = binding.characterName.value;
-          role.character = characterName;
+          var role = {
+            id: actor,
+            url: "/actor/" + actor,
+            label: actorName,
+            character: characterName
+          };
+
+          if (binding.characterName) {
+            var characterName = binding.characterName.value;
+            role.character = characterName;
+          }
+
+          film.cast.push(role);
         }
-
-        film.cast.push(role);
       });
 
       var entityUrl = "https://search-who-starred-in-xggtxxutyts6aujbbedqdvjtge.eu-west-1.es.amazonaws.com/whostarredin/film/" + film.id;
