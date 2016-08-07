@@ -1,7 +1,8 @@
 var fs = require('fs');
 var axios = require('axios');
+var http = require('http');
 
-var query = 'actors-query.rq';
+var query = 'actor-images-query.rq';
 
 // Usage node index.js PAGESIZE OFFSET LIMIT
 // i.e.
@@ -28,28 +29,18 @@ fs.readFile(query, function(error, queryfile) {
       console.log("ERROR from Wikidata: " + error);
     }).then(function(response) {
 
-      var actors = {};
-
       response.data.results.bindings.forEach(function(binding) {
         var actor = uriToID(decodeURIComponent(binding.wikipediaUrl.value.replace(/.*\//, '')));
-        var actorName = binding.label.value;
+        var image = binding.image.value;
+        var suffix = image.replace(/.*\./, '');
 
-        if (! actors[actor]) actors[actor] = {};
-
-        actors[actor].id = actor;
-        actors[actor].label = actorName;
-      });
-
-      for (var actor in actors) {
-
-        var entityUrl = "https://search-who-starred-in-xggtxxutyts6aujbbedqdvjtge.eu-west-1.es.amazonaws.com/whostarredin/actor/" + actor;
-
-        console.log(actors[actor]);
-
-        axios.put(entityUrl, actors[actor]).catch(function(error) {
-          console.log("ERROR from ES: ", error);
+        fs.mkdir("../tmpmedia/actor/" + actor, function() {
+          var file = fs.createWriteStream("../media/actor/" + actor + "/image." + suffix);
+          var request = http.get(image, function(response) {
+            response.pipe(file);
+          });
         });
-      }
+      });
     });
     offset += pageSize;
   }
