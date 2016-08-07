@@ -42,14 +42,14 @@ fs.readFile(query, function(error, queryfile) {
 
       for (var film in films) {
 
-        var entityUrl = "https://search-who-starred-in-xggtxxutyts6aujbbedqdvjtge.eu-west-1.es.amazonaws.com/whostarredin/film/" + film + "_update";
+        var entityUrl = "https://search-who-starred-in-xggtxxutyts6aujbbedqdvjtge.eu-west-1.es.amazonaws.com/whostarredin/film/" + film + "/_update";
 
         console.log(film);
 
         axios.post(entityUrl, {
           doc: films[film]
-        }).catch(function(error) {
-          console.log("ERROR from ES: ", error);
+        }).then(function() {
+          console.log("updated");
         });
       }
     });

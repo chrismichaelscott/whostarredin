@@ -43,6 +43,7 @@ fs.readFile(query, function(error, queryfile) {
         if (! films[film]) films[film] = {};
 
         roles[film].push({
+          id: actor,
           url: "/actor/" + actor,
           character: character,
           label: actorName
