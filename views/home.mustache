@@ -1,11 +1,14 @@
 {{> header}}
 
   <section class="introduction">
+    <h3>Featured films</h3>
     {{#featuredEntities}}
     <article>
-      <h3>{{label}}</h3>
-      <img src="{{image}}"></image>
-      <p>{{blurb}}</h3>
+      <a class="quiet-link" href="{{url}}">
+        <h4>{{label}}</h4>
+        <img src="{{image}}"></image>
+        <p>{{blurb}}</h3>
+      </a>
     </article>
     {{/featuredEntities}}
   </section>
