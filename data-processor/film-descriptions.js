@@ -8,6 +8,9 @@ var query = 'film-descriptions-query.rq';
 // i.e.
 // node index.js 5 90 100
 // ... will run two requests for 90-94 and 95-99
+//
+// This script should be run with pagesizes of ~100, otherwise Elasticsearch gets swamped and starts rejecting data.
+
 var pageSize = parseInt(process.argv[2]);
 var offset = parseInt(process.argv[3]);
 var limit = parseInt(process.argv[4]);
