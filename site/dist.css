@@ -79,14 +79,21 @@ a.quiet-link {
   color: currentColor;
   text-decoration: none; }
 
+section.featured-content h3 {
+  font-size: 3rem;
+  text-align: center; }
 section.featured-content article {
-  position: relative; }
+  position: relative;
+  margin-bottom: 4rem; }
 section.featured-content img {
   width: 12rem;
   height: 100%;
   position: absolute; }
 section.featured-content h4, section.featured-content p {
   margin-left: 13.4rem; }
+section.featured-content h4 {
+  font-weight: 100;
+  font-size: 2rem; }
 
 div.cse-container {
   position: absolute;

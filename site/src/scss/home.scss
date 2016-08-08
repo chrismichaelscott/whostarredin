@@ -1,6 +1,12 @@
 section.featured-content {
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
   article {
     position: relative;
+    margin-bottom: 4rem;
   }
 
   img {
@@ -11,5 +17,10 @@ section.featured-content {
 
   h4, p {
     margin-left: 13.4rem;
+  }
+
+  h4 {
+    font-weight: 100;
+    font-size: 2rem;
   }
 }
