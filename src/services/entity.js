@@ -44,21 +44,24 @@ function setImageUrl(id, type, imageType, publicationData) {
   });
 }
 
-function processFeaturedEntity(type, id, overlay, featuredEntities, lookupPromises) {
-  lookupPromises.push(axios.get(elasticsearchUrl + '/' + index + '/' + type + "/" + id).then(function(response) {
-    var entity = response.data._source;
-
-    lookupPromises.push(setImageUrl(id, type, "hero", entity));
-    lookupPromises.push(setImageUrl(id, type, "image", entity));
-
-    if (overlay.label) {
-      entity.label = overlay.label;
-    };
-    if (overlay.blurb) {
-      entity.blurb = overlay.blurb;
-    };
-    featuredEntities.push(entity);
-  }));
+function processFeaturedEntity(type, id, overlay) {
+  return new Promise(function(resolve, reject) {
+    axios.get(elasticsearchUrl + '/' + index + '/' + type + "/" + id).then(function(response) {
+      var entity = response.data._source;
+      entity.url = "/" + type + "/" + id;
+      
+      if (overlay.label) {
+        entity.label = overlay.label;
+      };
+      if (overlay.blurb) {
+        entity.blurb = overlay.blurb;
+      };
+console.log(entity);
+      setImageUrl(id, type, "image", entity).then(function() {
+        resolve(entity);
+      });
+    });
+  });
 }
 
 module.exports = {
@@ -114,18 +117,14 @@ module.exports = {
       var elasticsearchQueryUrl = elasticsearchUrl + '/' + index + '/' + type + '_' + overlay + '/_search?q=featured:true';
 
       var getMovie = axios.get(elasticsearchQueryUrl).then(function(result) {
-        var featuredEntities = [];
-        var lookupPromises = [];
+        var promises = [];
 
         result.data.hits.hits.forEach(function(hit) {
-          processFeaturedEntity(type, hit._id, hit._source, featuredEntities, lookupPromises);
+          promises.push(processFeaturedEntity(type, hit._id, hit._source));
         });
 
-        Promise.all(lookupPromises).then(function(results) {
-          featuredEntities = featuredEntities.sort(function() {
-            return .5 - Math.random();
-          });
-          resolve(featuredEntities);
+        Promise.all(promises).then(function(results) {
+          resolve(results);
         });
       });
     });
