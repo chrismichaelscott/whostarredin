@@ -10,9 +10,32 @@ function storeFilm(film) {
   });
 }
 
+function setIndexUpdateInterval(interval) {
+  var settings = {
+    "index": {
+      "refresh_interval" : interval
+    }
+  };
+  axios.put(config.elasticsearch.url + "/" + config.elasticsearch.index + "/_settings", settings).catch(function(error){
+    console.error(error);
+  }).then(function(response) {
+    console.log(response.body);
+  });
+}
+
+function disableIndexing() {
+  setIndexUpdateInterval("-1");
+}
+
+function enableIndexing() {
+  setIndexUpdateInterval("10s");
+}
+
 module.exports = {
   storeFilm: storeFilm,
   report: function() {
     return storeCount;
-  }
+  },
+  disableIndexing: disableIndexing,
+  enableIndexing: enableIndexing
 };

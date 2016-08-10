@@ -32,6 +32,8 @@ function processBinding(binding) {
   });
 }
 
+elasticsearch.disableIndexing();
+
 console.log("Retrieving all film URIs... this may take a minute");
 wikidata.query(catalogueQuery).then(function(results) {
   console.log("Processing " + results.results.bindings.length + " films");
@@ -47,6 +49,7 @@ wikidata.query(catalogueQuery).then(function(results) {
         nextBinding();
       } else {
         console.log("Completed processing");
+        elasticsearch.enableIndexing();
         setTimeout(function() { // ES puts are ran async to allow sparql to continue... wait for the last one to complete
           console.log(elasticsearch.report() + " of " + results.results.bindings.length + " stored successfully");
         }, 300);
