@@ -1,0 +1,8 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+select distinct ?description where {
+  <__DBPEDIA_URI__> a dbo:Film ;
+       dbo:abstract ?description .
+
+  FILTER(lang(?description) = "en" || LANG(?description) = "")
+}

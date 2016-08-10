@@ -1,0 +1,23 @@
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+
+SELECT * WHERE {
+	<__URI__> p:P161 ?castmember .
+
+	?castmember ps:P161 ?actor .
+	?actor rdfs:label ?label .
+
+	OPTIONAL {
+			?castmember pq:P453 _:c .
+		_:c   rdfs:label ?character
+		FILTER (lang(?character) = "en")
+	}
+
+	FILTER (lang(?label) = "en")
+}
