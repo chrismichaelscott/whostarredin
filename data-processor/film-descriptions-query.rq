@@ -4,5 +4,5 @@ select distinct ?uri ?abstract where {
   ?uri a dbo:Film ;
        dbo:abstract ?abstract .
 
-  FILTER(lang(?abstract) = "en" || LANG(?label) = "")
+  FILTER(lang(?abstract) = "en" || LANG(?abstract) = "")
 }

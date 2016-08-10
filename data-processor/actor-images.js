@@ -30,13 +30,15 @@ fs.readFile(query, function(error, queryfile) {
     }).then(function(response) {
 
       response.data.results.bindings.forEach(function(binding) {
-        var actor = uriToID(decodeURIComponent(binding.wikipediaUrl.value.replace(/.*\//, '')));
+        var actor = binding.actor.value.replace(/.*\//, '');
         var image = binding.image.value;
         var suffix = image.replace(/.*\./, '');
 
         fs.mkdir("../media/actor/" + actor, function() {
           console.log("../media/actor/" + actor + "/image." + suffix)
-          exec("wget " + image + " --output-document=../media/actor/" + actor + "/image." + suffix);
+          exec("wget " + image + " --output-document=../media/actor/" + actor + "/tmp." + suffix);
+          exec("convert ../media/actor/" + actor + "/tmp." + suffix + " -resize 300 ../media/actor/" + actor + "/image.png");
+          exec("rm ../media/actor/" + actor + "/tmp." + suffix);
         });
       });
     });
