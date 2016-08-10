@@ -2,9 +2,9 @@ var axios = require('axios');
 var fs = require('fs');
 var config = require('../../config.js');
 
-var elasticsearchUrl = config.elastisearch.url;
-var index = config.elastisearch.index;
-var overlay = config.elastisearch.overlaySuffix;
+var elasticsearchUrl = config.elasticsearch.url;
+var index = config.elasticsearch.index;
+var overlay = config.elasticsearch.overlaySuffix;
 
 var propertiesToDereference = [
   {
@@ -18,6 +18,10 @@ var propertiesToDereference = [
     imageType: "film"
   }
 ];
+
+function labelToId(label) {
+  return label.toLowerCase().replace(/[\W_]+/g, '-').replace(/-$/, '')
+}
 
 function setImageUrl(id, type, imageType, publicationData) {
   return new Promise(function(resolve, reject) {
@@ -48,15 +52,14 @@ function processFeaturedEntity(type, id, overlay) {
   return new Promise(function(resolve, reject) {
     axios.get(elasticsearchUrl + '/' + index + '/' + type + "/" + id).then(function(response) {
       var entity = response.data._source;
-      entity.url = "/" + type + "/" + id;
-      
+
       if (overlay.label) {
         entity.label = overlay.label;
       };
       if (overlay.blurb) {
         entity.blurb = overlay.blurb;
       };
-console.log(entity);
+
       setImageUrl(id, type, "image", entity).then(function() {
         resolve(entity);
       });

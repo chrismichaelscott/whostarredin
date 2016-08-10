@@ -10,7 +10,7 @@ module.exports = {
 			enabled: false
 		}
 	},
-	elastisearch: {
+	elasticsearch: {
 		url: "https://search-who-starred-in-xggtxxutyts6aujbbedqdvjtge.eu-west-1.es.amazonaws.com",
 		index: "whostarredin",
 		overlaySuffix: "overlay"
