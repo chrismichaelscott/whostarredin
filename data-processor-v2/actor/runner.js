@@ -9,27 +9,18 @@ var dataProcessors = require('./src/data-processors');
 
 function processBinding(binding) {
 return;
-  var wikidataUri = binding.film.value;
-  var id = utils.urlToId(binding.film.value);
-  var film = {
+  var wikidataUri = binding.actor.value;
+  var id = utils.urlToId(binding.actor.value);
+  var actor = {
     model: {
       id: id,
-      url: "/film/" + id + "/" + utils.labelToId(binding.label.value),
+      url: "/actor/" + id + "/" + utils.labelToId(binding.label.value),
       label: binding.label.value
     },
     wikidataUri: wikidataUri
   };
 
-  // This should be added to the Promises.all but I can't get the dual catch to work as this is a warn. not fail, error
-  dataProcessors.getWikipediaUrl(film).then(dataProcessors.getDescription);
-  return new Promise(function(resolve, reject) {
-    Promise.all([
-      dataProcessors.getCast(film),
-      dataProcessors.getMetadata(film)
-    ]).then(function() {
-      dataProcessors.postProcess(film).then(elasticsearch.storeFilm).then(resolve);
-    });
-  });
+  elasticsearch.storeActor(actor).then(resolve);
 }
 
 console.log("Retrieving all actor URIs... this may take a minute");
