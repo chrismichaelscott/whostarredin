@@ -2,8 +2,8 @@ var config = require('../config');
 var axios = require('axios');
 
 var storeCount = 0;
-function storeFilm(film) {
-  axios.put(config.elasticsearch.url + "/" + config.elasticsearch.index + "/film/" + film.model.id, film.model).catch(function(error){
+function storeActor(film) {
+  axios.put(config.elasticsearch.url + "/" + config.elasticsearch.index + "/actor/" + film.model.id, film.model).catch(function(error){
     console.error(error);
   }).then(function() {
     storeCount++;
@@ -11,7 +11,7 @@ function storeFilm(film) {
 }
 
 module.exports = {
-  storeFilm: storeFilm,
+  storeActor: storeActor,
   report: function() {
     return storeCount;
   }
