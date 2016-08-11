@@ -133,10 +133,18 @@ module.exports = {
     });
   },
   getRelatedEntities(type, id) {
+    var fields;
+    if (type == "film") {
+      fields = ["blurb", "cast"];
+    } else {
+      fields = ["label"];
+    }
+
     return new Promise(function(resolve, reject) {
       var query = {
         "query": {
           "more_like_this" : {
+            "fields" : fields,
             "like": {
               "_index" : index,
               "_type" : type,
