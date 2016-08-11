@@ -15,7 +15,7 @@ function getCast(film) {
   return new Promise(function(resolve, reject) {
     wikidata.query(queries.castQuery.replace(/__URI__/, film.wikidataUri)).then(function(result) {
       film.model.cast = result.results.bindings.map(function(binding) {
-        var id = utils.urlToId(binding.castmember.value)
+        var id = utils.urlToId(binding.actor.value)
         return {
           id: id,
           url: "/actor/" + id + "/" + utils.labelToId(binding.label.value),
