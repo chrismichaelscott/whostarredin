@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Who was in {{subject.label}}?</title>
+    <meta charset="UTF-8">
+    {{#film}}
+    <title>Who was in {{film.label}}?</title>
+    {{/film}}
+    {{#actor}}
+    <title>In which movies has {{actor.label}} appeared?</title>
+    {{/actor}}
+    {{#director}}
+    <title>Which movies has {{director.label}} directed?</title>
+    {{/director}}
 
     <!-- HTML 5 Meta Tags -->
     <meta name="language" content="EN"/>
-    <meta name="keywords" content="movies, films, actors, cinema, blockbusters, {{subject.label}}"/>
-    <meta name="description" content="Who Was In...? Find out all about {{subject.label}} and any of your other movie & film star related queries."/>
     <meta name="subject" content="movies"/>
-    <meta name="abstract" content="All about {{subject.label}}, related movies and actors."/>
     <meta name="robots" content="index,follow"/>
     <meta name="copyright" content="Who Starred In"/>
     <meta name="author" content="Admin, whostarredin@gmail.com"/>
@@ -17,54 +22,87 @@
     <meta name="url" content="http://whowasin.com"/>
     <meta name="identifier-URL" content="http://whowasin.com"/>
     <meta name="Classification" content="Movies"/>
-    <meta name="Who was in {{subject.label}}?" content="See which movies and actors are connected to {{subject.label}}"/>
     <meta name="coverage" content="Worldwide"/>
     <meta name="distribution" content="Global"/>
     <meta name="rating" content="General"/>
     <meta name="revisit-after" content="24 hours"/>
+    {{#film}}
+    <meta name="keywords" content="movies, films, actors, cinema, blockbusters, {{film.label}}"/>
+    <meta name="description" content="Find out who starred in {{film.label}}. Get a full rundown of {{film.label}}'s stars and other related movies."/>
+    <meta name="abstract" content="All about {{film.label}}, detailing its cast, giving a summary and suggesting related movies."/>
+    <meta name="Who was in {{film.label}}?" content="See who starred in {{film.label}}, along with supporting roles and related movies."/>
+    {{/film}}
+    {{#actor}}
+    <meta name="keywords" content="movies, films, actors, cinema, blockbusters, {{actor.label}}"/>
+    <meta name="description" content="Find out who starred in {{actor.label}}. Get a full rundown of {{actor.label}}'s stars and other related movies."/>
+    <meta name="abstract" content="All about {{actor.label}}, detailing its cast, giving a summary and suggesting related movies."/>
+    <meta name="In which movies has {{actor.label}} appeared?" content="See which movies {{actor.label}} has starred in or appeared in a supporting role."/>
+    {{/actor}}
+    {{#director}}
+    <meta name="keywords" content="movies, films, actors, cinema, blockbusters, {{director.label}}"/>
+    <meta name="description" content="Find out which movies {{director.label}} has directed. Get a full rundown of {{director.label}}'s filmography."/>
+    <meta name="abstract" content="All about {{director.label}}, detailing their movies and career."/>
+    <meta name="Which movies has {{director.label}} directed?" content="See which movies {{director.label}} has directed, along with related movies and info on their career."/>
+    {{/director}}
 
     <!-- OpenGraph Meta Tags -->
-    <meta name="og:title" content="{{subject.label}}"/>
-    <meta name="og:type" content="movie"/>
-    <!-- <meta name="og:url" content=""/> -->
-    <meta name="og:image" content="http://whowasin.com/media/homepage/hero.png"/>
     <meta name="og:site_name" content="Who Was In...?"/>
-    <meta name="og:description" content="All about {{subject.label}}, related movies and actors."/>
     <meta name="og:locale" content="en_US"/>
+    {{#film}}
+    <meta name="og:title" content="{{film.label}}"/>
+    <meta name="og:type" content="movie"/>
+    <meta name="og:image" content="http://whowasin.com/media/{{film.image}}"/>
+    <meta name="og:description" content="Find out who was in {{film.label}}, plus related movies and actors."/>
+    <meta name="og:url" content="http://whowasin.com{{film.url}}"/>
+    {{/film}}
+    {{#actor}}
+    <meta name="og:title" content="{{actor.label}}"/>
+    <meta name="og:type" content="actor"/>
+    <meta name="og:image" content="http://whowasin.com/media/{{actor.image}}"/>
+    <meta name="og:description" content="All about {{actor.label}}, which movies they were in, who they starred with and more."/>
+    <meta name="og:url" content="http://whowasin.com{{actor.url}}"/>
+    {{/actor}}
+    {{#actor}}
+    <meta name="og:title" content="{{director.label}}"/>
+    <meta name="og:type" content="director"/>
+    <meta name="og:image" content="http://whowasin.com/media/{{director.image}}"/>
+    <meta name="og:description" content="All about {{director.label}}, which movies they directed, who their favourite actors are and more."/>
+    <meta name="og:url" content="http://whowasin.com{{director.url}}"/>
+    {{/actor}}
 
-  <link href='https://fonts.googleapis.com/css?family=Exo:800|Lato:400,100' rel='stylesheet' type='text/css'>
-  <style>
-    {{inlineCss}}
-  </style>
+    <link href='https://fonts.googleapis.com/css?family=Exo:800|Lato:400,100' rel='stylesheet' type='text/css'>
+    <style>
+            {{inlineCss}}
+    </style>
 </head>
 <body>
-  <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{gtmId}}"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id={{gtmId}}"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','{{gtmId}}');</script>
-  <!-- End Google Tag Manager -->
-  <div class="cse-container">
+<!-- End Google Tag Manager -->
+<div class="cse-container">
     <script>
-      (function() {
-        var cx = '{{cseId}}';
-        var gcse = document.createElement('script');
-        gcse.type = 'text/javascript';
-        gcse.async = true;
-        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(gcse, s);
-      })();
+        (function() {
+            var cx = '{{cseId}}';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
     </script>
     <gcse:search></gcse:search>
-  </div>
-  <header>
+</div>
+<header>
     <a class="quiet-link" href="/"><h1>Who was in...</h1></a>
     <div class="hero-image-wrapper">
-      <img src="{{subject.hero}}" class="fullbleed"></img>
+        <img src="{{subject.hero}}" class="fullbleed"></img>
     </div>
     <h2>{{subject.label}}</h2>
-  </header>
+</header>
