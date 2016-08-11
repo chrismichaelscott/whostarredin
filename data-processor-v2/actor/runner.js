@@ -8,7 +8,6 @@ var catalogueQuery = fs.readFileSync(config.queries.catalogueQueryFile).toString
 var dataProcessors = require('./src/data-processors');
 
 function processBinding(binding) {
-return;
   var wikidataUri = binding.actor.value;
   var id = utils.urlToId(binding.actor.value);
   var actor = {
@@ -20,7 +19,9 @@ return;
     wikidataUri: wikidataUri
   };
 
-  elasticsearch.storeActor(actor).then(resolve);
+  return new Promise(function(resolve, reject) {
+    elasticsearch.storeActor(actor).then(resolve);
+  });
 }
 
 console.log("Retrieving all actor URIs... this may take a minute");
