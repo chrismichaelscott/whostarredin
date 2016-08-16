@@ -26,9 +26,37 @@
       {{/film.cast}}
     </ul>
   </section>
+  <section class="info">
+    <dl>
+      {{#film.directors.length}}
+      <dt>Directed by</dt>
+      {{#film.directors}}
+      <dd>{{label}}</dd>
+      {{/film.directors}}
+      {{/film.directors.length}}
+      {{#film.releaseDate}}
+      <dt>Released</dt>
+      <dd>{{film.releaseDate}}</dd>
+      {{/film.releaseDate}}
+      {{#film.rating}}
+      <dt>Rating</dt>
+      <dd>{{film.rating}}</dd>
+      {{/film.rating}}
+    </dl>
+    {{#film.awards.length}}
+    <h2>Awards</h2>
+    <ul>
+      {{#film.awards}}
+      <li>{{label}}</li>
+      {{/film.awards}}
+    </ul>
+    {{/film.awards.length}}
+  </section>
+  {{#related.length}}
   <section class="related">
     {{> related}}
   </section>
+  {{/related.length}}
   <section class="reviews">
     {{> reviews}}
   </section>
