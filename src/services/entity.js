@@ -139,6 +139,8 @@ module.exports = {
         var imagePromises = [];
 
         imagePromises.push(setImageUrl(id, type, "hero", publicationData));
+        imagePromises.push(setImageUrl(id, type, "hero-medium", publicationData));
+        imagePromises.push(setImageUrl(id, type, "hero-small", publicationData));
         imagePromises.push(setImageUrl(id, type, "image", publicationData));
 
         if (result[1]) {
