@@ -67,6 +67,126 @@ module.exports = {
     });
   },
 
+  renderIndex: function(type, prefix) {
+    var templatePromise = templateService.get("entity-index");
+    var partialsPromise = templateService.getPartials(["header", "footer"]);
+    var entityPromise = entityService.getEntityList(type, prefix);
+    var inliningPromise = inliningService.get();
+
+    return new Promise(function(resolve, reject) {
+      Promise.all([
+        templatePromise,
+        partialsPromise,
+        entityPromise,
+        inliningPromise
+      ]).then(function(results) {
+        console.log("Successfully built page model for index of  " + type + " starting '" + prefix + "'");
+
+        var template = results[0];
+        var headerPartial = results[1][0];
+        var footerPartial = results[1][1];
+        var subject = results[2];
+        var css = results[3];
+
+        var model = {
+          inlineCss: css,
+          subject: subject,
+          prefix: prefix,
+          gtmId: config.gtm.id,
+          cseId: config.cse.id
+        };
+
+        var partials = {
+          header: headerPartial,
+          footer: footerPartial
+        };
+
+        try {
+          resolve(
+            Mustache.render(
+              template,
+              model,
+              partials
+            )
+          );
+        } catch (error) {
+          console.error(error);
+        }
+      }).catch(function(reason) {
+        reject(reason);
+      });
+    });
+  },
+
+  renderMasterIndex: function(type, prefix) {
+    var templatePromise = templateService.get("master-index");
+    var partialsPromise = templateService.getPartials(["header", "footer"]);
+    var inliningPromise = inliningService.get();
+
+    return new Promise(function(resolve, reject) {
+      Promise.all([
+        templatePromise,
+        partialsPromise,
+        inliningPromise
+      ]).then(function(results) {
+        console.log("Successfully built page model for index of  " + type);
+
+        var template = results[0];
+        var headerPartial = results[1][0];
+        var footerPartial = results[1][1];
+        var css = results[2];
+
+        var sections = ["0-9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"].map(function(section) {
+          var subsections;
+          if (section == "0-9") {
+            subsections = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+          } else {
+            subsections = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"].map(function(subsection) {
+              return (section + subsection).toLowerCase();
+            });
+          }
+
+          return {
+            header: section,
+            subsections: subsections
+          }
+        });
+
+        var model = {
+          sections: sections,
+          subject: {
+            "hero": "/media/homepage/hero.png",
+            "hero-medium": "/media/homepage/hero-medium.png",
+            "hero-small": "/media/homepage/hero-small.png"
+          },
+          inlineCss: css,
+          type: type,
+          gtmId: config.gtm.id,
+          cseId: config.cse.id
+        };
+
+        var partials = {
+          header: headerPartial,
+          footer: footerPartial
+        };
+
+        try {
+          resolve(
+            Mustache.render(
+              template,
+              model,
+              partials
+            )
+          );
+        } catch (error) {
+          console.error(error);
+        }
+      }).catch(function(reason) {
+        reject(reason);
+      });
+    });
+  },
+
   renderHomepage: function() {
     var templatePromise = templateService.get("home");
     var partialsPromise = templateService.getPartials(["header", "footer"]);
@@ -92,7 +212,9 @@ module.exports = {
           inlineCss: css,
           featuredEntities: featuredEntities,
           subject: {
-            hero: "media/homepage/hero.png"
+            "hero": "/media/homepage/hero.png",
+            "hero-medium": "/media/homepage/hero-medium.png",
+            "hero-small": "/media/homepage/hero-small.png"
           },
           gtmId: config.gtm.id,
           cseId: config.cse.id

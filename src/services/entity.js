@@ -193,6 +193,30 @@ module.exports = {
     });
   },
   // TODO refactor functionality into elasticsearch service
+  getEntityList(type, prefix) {
+    return new Promise(function(resolve, reject) {
+      var elasticsearchQueryUrl = elasticsearchUrl + '/' + index + '/' + type + '/_search?q=label:' + prefix + '*&size=10000';
+
+      axios.get(elasticsearchQueryUrl).then(function(result) {
+        var promises = [];
+
+        var results = result.data.hits.hits.filter(function(hit) {
+          return hit._source.label.toLowerCase().startsWith(prefix.toLowerCase());
+        }).map(function(hit) {
+          return hit._source;
+        });
+
+        resolve({
+          results: results,
+          hero: "/media/homepage/hero.png",
+          "hero-medium": "/media/homepage/hero-medium.png",
+          "hero-small": "/media/homepage/hero-small.png"
+        });
+
+      });
+    });
+  },
+  // TODO refactor functionality into elasticsearch service
   getRelatedEntities(type, id) {
     var fields;
     if (type == "film") {
