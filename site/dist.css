@@ -8,10 +8,8 @@ header h1, header h2, section {
 
 section {
   clear: both; }
-  section.related {
-    padding-top: 1.6rem; }
   section.reviews {
-    padding-top: 3rem; }
+    padding-top: 1rem; }
 
 @media (min-width: 1700px) {
   header h1, header h2, section {
@@ -94,6 +92,23 @@ section.featured-content h4, section.featured-content p {
 section.featured-content h4 {
   font-weight: 100;
   font-size: 2rem; }
+
+section.info {
+  padding-top: 1.6em; }
+  section.info dl {
+    position: relative;
+    line-height: 1.2em; }
+    section.info dl * {
+      padding: 0 0 1em; }
+    section.info dl dt {
+      float: left;
+      clear: left;
+      width: 7em;
+      text-align: right;
+      text-transform: uppercase;
+      font-weight: 100; }
+    section.info dl dd {
+      margin: 0 0 0 8em; }
 
 div.cse-container {
   position: absolute;

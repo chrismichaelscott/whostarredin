@@ -19,6 +19,57 @@ var propertiesToDereference = [
   }
 ];
 
+var fieldFormatters = [
+  {
+    field: "releaseDate",
+    format: function(timestamp) {
+      var year = timestamp.substr(0, 4);
+      var month;
+
+      switch(timestamp.substr(5, 2)) {
+        case "01":
+          month = "January";
+          break;
+        case "02":
+          month = "February";
+          break;
+        case "03":
+          month = "March";
+          break;
+        case "04":
+          month = "April";
+          break;
+        case "05":
+          month = "May";
+          break;
+        case "06":
+          month = "June";
+          break;
+        case "07":
+          month = "July";
+          break;
+        case "08":
+          month = "August";
+          break;
+        case "09":
+          month = "September";
+          break;
+        case "10":
+          month = "October";
+          break;
+        case "11":
+          month = "November";
+          break;
+        case "12":
+          month = "December";
+          break;
+      }
+
+      return month + " " + year;
+    }
+  }
+]
+
 function labelToId(label) {
   return label.toLowerCase().replace(/[\W_]+/g, '-').replace(/-$/, '')
 }
@@ -109,12 +160,19 @@ module.exports = {
           }
         });
 
+        fieldFormatters.forEach(function(formatter) {
+          if (publicationData[formatter.field]) {
+            publicationData[formatter.field] = formatter.format(publicationData[formatter.field]);
+          }
+        });
+
         Promise.all(imagePromises).then(function() {
           resolve(publicationData);
         });
       });
     });
   },
+  // TODO refactor functionality into elasticsearch service
   getFeaturedEntities: function(type, limit) {
     return new Promise(function(resolve, reject) {
       var elasticsearchQueryUrl = elasticsearchUrl + '/' + index + '/' + type + '_' + overlay + '/_search?q=featured:true';
@@ -132,10 +190,11 @@ module.exports = {
       });
     });
   },
+  // TODO refactor functionality into elasticsearch service
   getRelatedEntities(type, id) {
     var fields;
     if (type == "film") {
-      fields = ["blurb", "cast"];
+      fields = ["blurb", "directors.0.id", "directors.1.id", "cast.0.id", "cast.1.id", "cast.2.id", "cast.3.id", "cast.4.id", "cast.5.id", "cast.6.id", "cast.7.id", "cast.8.id", "cast.9.id", "cast.10.id"];
     } else {
       fields = ["label"];
     }
