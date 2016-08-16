@@ -1,0 +1,13 @@
+{{> header}}
+  <section class="entity-index">
+    <h2>{{type}} index</h2>
+    {{#sections}}
+    <h3>{{header}}</h3>
+    <ul>
+      {{#subsections}}
+      <li><a href="/{{type}}/index/{{.}}">{{.}}</a></li>
+      {{/subsections}}
+    </ul>
+    {{/sections}}
+  </section>
+{{> footer}}

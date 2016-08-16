@@ -1,0 +1,10 @@
+{{> header}}
+  <section class="entity-index">
+    <h2>{{prefix}}</h2>
+    <ul>
+      {{#subject.results}}
+      <li><a href="{{url}}">{{label}}</a></li>
+      {{/subject.results}}
+    </ul>
+  </section>
+{{> footer}}

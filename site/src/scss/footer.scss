@@ -1,0 +1,20 @@
+footer {
+  background-color: $color-scheme-primary;
+  margin-top: 2em;
+  padding: 2em;
+
+  nav {
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-left: 2em;
+      display: inline-block;
+
+      a {
+        color: $color-scheme-background;
+        @include fancy-underline($color-scheme-background, $color-scheme-primary);
+      }
+    }
+  }
+}

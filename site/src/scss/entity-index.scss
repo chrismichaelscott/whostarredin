@@ -1,0 +1,19 @@
+section.entity-index {
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 0.2em;
+
+      a {
+        color: $color-scheme-foreground;
+        @include fancy-underline($color-scheme-foreground, $color-scheme-background);
+      }
+    }
+
+    @media (min-width: ($breakpoint-tablet + 150)) {
+      column-count: 2;
+    }
+  }
+}
