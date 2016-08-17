@@ -5,7 +5,12 @@
     {{#featuredEntities}}
     <article>
       <a class="quiet-link" href="{{url}}">
+        {{#image}}
         <img src="{{image}}"></img>
+        {{/image}}
+        {{#hero-small}}
+        <img src="{{hero-small}}"></img>
+        {{/hero-small}}
         <h4>{{label}}</h4>
         <p>{{blurb}}</p>
       </a>
