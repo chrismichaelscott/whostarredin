@@ -11,6 +11,9 @@
     {{#director}}
     <title>Which movies has {{director.label}} directed?</title>
     {{/director}}
+		{{#featuredEntities.length}}
+		<title>Who was in your favourite movie?</title>
+		{{/featuredEntities.length}}
 
     <!-- HTML 5 Meta Tags -->
     <meta name="language" content="EN"/>
@@ -26,6 +29,7 @@
     <meta name="distribution" content="Global"/>
     <meta name="rating" content="General"/>
     <meta name="revisit-after" content="24 hours"/>
+    <meta name="google-site-verification" content="b144epAG3Mc8ZnPEanp7SfvdYy7arXMubAkffYnnh7E" />
     {{#film}}
     <meta name="keywords" content="movies, films, actors, cinema, blockbusters, {{film.label}}"/>
     <meta name="description" content="Find out who starred in {{film.label}}. Get a full rundown of {{film.label}}'s stars and other related movies."/>
@@ -44,6 +48,12 @@
     <meta name="abstract" content="All about {{director.label}}, detailing their movies and career."/>
     <meta name="Which movies has {{director.label}} directed?" content="See which movies {{director.label}} has directed, along with related movies and info on their career."/>
     {{/director}}
+		{{#featuredEntities.length}}
+		<meta name="keywords" content="movies, films, actors, cinema, blockbusters"/>
+		<meta name="description" content="Find out which actors featured in your favourite movies."/>
+		<meta name="abstract" content="All about which stars appeared in which movies."/>
+		<meta name="Who was in your favourite movie?" content="See which actors appeared in your favourite movies."/>
+		{{/featuredEntities.length}}
 
     <!-- OpenGraph Meta Tags -->
     <meta name="og:site_name" content="Who Was In...?"/>
@@ -69,6 +79,13 @@
     <meta name="og:description" content="All about {{director.label}}, which movies they directed, who their favourite actors are and more."/>
     <meta name="og:url" content="http://whowasin.com{{director.url}}"/>
     {{/director}}
+		{{#featuredEntities.length}}
+		<meta name="og:title" content="Who was in...?"/>
+		<meta name="og:type" content="movies"/>
+		<meta name="og:image" content="http://whowasin.com/media/film/default/image.png"/>
+		<meta name="og:description" content="Find which actors appeared in your favourite movies here."/>
+		<meta name="og:url" content="http://whowasin.com"/>
+		{{/featuredEntities.length}}
 
     <link href='https://fonts.googleapis.com/css?family=Exo:800|Lato:400,100' rel='stylesheet' type='text/css'>
     <style>
