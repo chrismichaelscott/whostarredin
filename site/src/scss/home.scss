@@ -6,21 +6,111 @@ section.featured-content {
 
   article {
     position: relative;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
+    clear: both;
+
+    img {
+      height: 100%;
+      width: 300px;
+      object-fit: cover;
+      position: absolute;
+    }
+
+    h4, p {
+      margin-left: 316px;
+    }
+
+    p {
+      max-height: 8.5em;
+      overflow: hidden;
+
+      &:after {
+        content: '...';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
   }
 
-  img {
-    width: 12rem;
-    max-height: 100%;
-    position: absolute;
+  @media (min-width: $breakpoint-laptop) {
+    article:first-of-type {
+      position: relative;
+      margin-bottom: 4rem;
+
+      &:after {
+        content: ' ';
+        position: absolute;
+        bottom: -2rem;
+        height: 0px;
+        border-bottom: 2px solid $color-scheme-primary;
+      }
+
+      img {
+        height: 100%;
+        width: 500px;
+        object-fit: cover;
+        position: absolute;
+      }
+
+      h4, p {
+        margin-left: 516px;
+      }
+
+      p {
+        max-height: 17em;
+      }
+    }
+    article:nth-of-type(2), article:nth-of-type(3), {
+      position: relative;
+      margin-bottom: 2rem;
+      clear: none;
+
+      width: 49%;
+      float: left;
+
+      img {
+        height: 100px;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+      }
+
+      p, h4 {
+        margin-left: 0;
+      }
+
+      p {
+        max-height: 17em;
+      }
+    }
+    article:nth-of-type(3) {
+      margin-left: 2%;
+    }
   }
 
-  h4, p {
-    margin-left: 13.4rem;
+  @media (min-width: $breakpoint-large-desktop) {
+    article:first-of-type {
+      img {
+        width: 800px;
+      }
+
+      h4, p {
+        margin-left: 816px;
+      }
+
+      p {
+        max-height: 34em;
+      }
+    }
   }
 
   h4 {
-    font-weight: 100;
-    font-size: 2rem;
+    font-size: 2em;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-top: 0;
   }
 }
