@@ -115,7 +115,7 @@ section.featured-content article {
       object-fit: cover;
       position: absolute; }
     section.featured-content article:first-of-type h4, section.featured-content article:first-of-type p {
-      margin-left: 516px; }
+      margin-left: 532px; }
     section.featured-content article:first-of-type p {
       max-height: 17em; }
   section.featured-content article:nth-of-type(2), section.featured-content article:nth-of-type(3) {
@@ -125,7 +125,10 @@ section.featured-content article {
     width: 49%;
     float: left; }
     section.featured-content article:nth-of-type(2) img, section.featured-content article:nth-of-type(3) img {
-      display: none; }
+      height: 100px;
+      width: 100%;
+      object-fit: cover;
+      position: relative; }
     section.featured-content article:nth-of-type(2) p, section.featured-content article:nth-of-type(2) h4, section.featured-content article:nth-of-type(3) p, section.featured-content article:nth-of-type(3) h4 {
       margin-left: 0; }
     section.featured-content article:nth-of-type(2) p, section.featured-content article:nth-of-type(3) p {
@@ -136,7 +139,7 @@ section.featured-content article {
   section.featured-content article:first-of-type img {
     width: 800px; }
   section.featured-content article:first-of-type h4, section.featured-content article:first-of-type p {
-    margin-left: 816px; }
+    margin-left: 840px; }
   section.featured-content article:first-of-type p {
     max-height: 34em; } }
 section.featured-content h4 {

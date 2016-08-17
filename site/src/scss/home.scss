@@ -54,7 +54,7 @@ section.featured-content {
       }
 
       h4, p {
-        margin-left: 516px;
+        margin-left: 532px;
       }
 
       p {
@@ -70,7 +70,10 @@ section.featured-content {
       float: left;
 
       img {
-        display: none;
+        height: 100px;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
       }
 
       p, h4 {
@@ -93,7 +96,7 @@ section.featured-content {
       }
 
       h4, p {
-        margin-left: 816px;
+        margin-left: 840px;
       }
 
       p {
