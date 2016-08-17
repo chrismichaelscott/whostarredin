@@ -99,7 +99,7 @@ function setImageUrl(id, type, imageType, publicationData) {
   });
 }
 
-function processFeaturedEntity(type, id, overlay, index) {
+function processFeaturedEntity(type, id, overlay, entityNumber) {
   return new Promise(function(resolve, reject) {
     axios.get(elasticsearchUrl + '/' + index + '/' + type + "/" + id).then(function(response) {
       var entity = response.data._source;
@@ -111,7 +111,7 @@ function processFeaturedEntity(type, id, overlay, index) {
         entity.blurb = overlay.blurb;
       };
 
-      if (index == 1 || index == 2) {
+      if (entityNumber == 1 || entityNumber == 2) {
         setImageUrl(id, type, "hero-small", entity).then(function() {
           resolve(entity);
         });
@@ -188,8 +188,8 @@ module.exports = {
       var getMovie = axios.get(elasticsearchQueryUrl).then(function(result) {
         var promises = [];
 
-        result.data.hits.hits.forEach(function(hit, index) {
-          promises.push(processFeaturedEntity(type, hit._id, hit._source, index));
+        result.data.hits.hits.forEach(function(hit, entityNumber) {
+          promises.push(processFeaturedEntity(type, hit._id, hit._source, entityNumber));
         });
 
         Promise.all(promises).then(function(results) {
