@@ -30,6 +30,7 @@ function handleMasterIndexRequest(type, request, response) {
 }
 
 app.use('/media', express.static('media'));
+app.use('/sitemap', express.static('sitemap'));
 
 app.get('/', function(request, response) {
   pageResource.renderHomepage().then(function(responseBody) {
