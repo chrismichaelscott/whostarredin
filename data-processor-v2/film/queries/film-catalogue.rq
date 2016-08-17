@@ -11,3 +11,14 @@ SELECT * WHERE {
 	?film wdt:P31 wd:Q11424 ; rdfs:label ?label
   FILTER (lang(?label) = "en")
 }
+# Add a limit  & page through results; overlap pages.
+# E.g.:
+# First run -
+# LIMIT 50000
+# Second run -
+# LIMIT 95000
+# OFFSET 45000
+# Third run - 
+# LIMIT 12000
+# OFFSET 90000
+# etc...

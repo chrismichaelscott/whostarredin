@@ -1,6 +1,6 @@
 var fs = require('fs');
 var axios = require('axios');
-var exec = require('child_process').exec;
+var execSync = require('child_process').execSync;
 
 var query = 'actor-images-query.rq';
 
@@ -36,9 +36,9 @@ fs.readFile(query, function(error, queryfile) {
 
         fs.mkdir("../media/actor/" + actor, function() {
           console.log("../media/actor/" + actor + "/image." + suffix)
-          exec("wget " + image + " --output-document=../media/actor/" + actor + "/tmp." + suffix);
-          exec("convert ../media/actor/" + actor + "/tmp." + suffix + " -resize 300 ../media/actor/" + actor + "/image.png");
-          exec("rm ../media/actor/" + actor + "/tmp." + suffix);
+          execSync("wget " + image + " --output-document=../media/actor/" + actor + "/tmp." + suffix);
+          execSync("convert ../media/actor/" + actor + "/tmp." + suffix + " -resize 300 ../media/actor/" + actor + "/image.png");
+          execSync("rm ../media/actor/" + actor + "/tmp." + suffix);
         });
       });
     });

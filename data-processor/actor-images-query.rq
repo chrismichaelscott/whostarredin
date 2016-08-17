@@ -9,14 +9,10 @@ PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX wsi: <http://whostarredin.com/data/>
 PREFIX schema: <http://schema.org/>
 
-SELECT REDUCED ?image ?wikipediaUrl
+SELECT REDUCED ?image ?actor
 
 WHERE {
 		_:film wdt:P161 ?actor .
 
-    ?wikipediaUrl schema:about ?actor .
-
 		?actor wdt:P18 ?image .
-
-		FILTER (regex(str(?wikipediaUrl), "https://en."))
 }
