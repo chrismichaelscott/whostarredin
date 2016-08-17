@@ -13,6 +13,7 @@ section.featured-content {
       height: 100%;
       width: 300px;
       object-fit: cover;
+      object-position: 50% 0%;
       position: absolute;
     }
 
@@ -49,8 +50,6 @@ section.featured-content {
       img {
         height: 100%;
         width: 500px;
-        object-fit: cover;
-        position: absolute;
       }
 
       h4, p {
@@ -72,7 +71,6 @@ section.featured-content {
       img {
         height: 100px;
         width: 100%;
-        object-fit: cover;
         position: relative;
       }
 
