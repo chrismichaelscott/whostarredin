@@ -88,7 +88,7 @@ section.featured-content article {
     height: 100%;
     width: 300px;
     object-fit: cover;
-    object-position: 50% 35%;
+    object-position: 50% 15%;
     position: absolute; }
   section.featured-content article h4, section.featured-content article p {
     margin-left: 316px; }
@@ -112,7 +112,8 @@ section.featured-content article {
       border-bottom: 2px solid #4F7AC3; }
     section.featured-content article:first-of-type img {
       height: 100%;
-      width: 500px; }
+      width: 500px;
+      object-position: 50% 42%; }
     section.featured-content article:first-of-type h4, section.featured-content article:first-of-type p {
       margin-left: 532px; }
     section.featured-content article:first-of-type p {
