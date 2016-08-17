@@ -70,10 +70,7 @@ section.featured-content {
       float: left;
 
       img {
-        height: 100px;
-        width: 100%;
-        object-fit: cover;
-        position: relative;
+        display: none;
       }
 
       p, h4 {
